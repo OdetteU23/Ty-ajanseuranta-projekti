@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net" modified="2023-09-13T11:11:51.797Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81" etag="atMkZv35GtWxvtbKxt_r" version="21.7.5" type="device">
+  <diagram name="Page-1" id="lZbiz4aksvmJrj0W9TeW">
+    <mxGraphModel dx="961" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1iy0GvLkuGjbGDHnBuzD-1" value="Toiminnot" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="90" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1iy0GvLkuGjbGDHnBuzD-2" value="Käyttäjä voi&lt;br&gt;-luoda tunnukset&lt;br&gt;-merkitä aloitus ja lopetus ajan töille/opiskelulle&lt;br&gt;-tarkastella omia tavoite/sovittuja työaikoja ja omia toteutuneita työaikoja&lt;br&gt;&lt;font color=&quot;#ff441f&quot;&gt;-jättää viestiä hallitsevalle käyttäjälle&lt;br&gt;&lt;/font&gt;-ilmoittaa käyttäjälle esm muutuneista sovituista työajoista" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry y="150" width="240" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="1iy0GvLkuGjbGDHnBuzD-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.449;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1iy0GvLkuGjbGDHnBuzD-1" target="1iy0GvLkuGjbGDHnBuzD-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1iy0GvLkuGjbGDHnBuzD-4" value="työntekijä" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="105" y="10" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1iy0GvLkuGjbGDHnBuzD-5" value="hallitseva käyttäjä" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="345" y="10" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1iy0GvLkuGjbGDHnBuzD-6" value="Toiminnot" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="90" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1iy0GvLkuGjbGDHnBuzD-7" value="Käyttäjä voi&lt;br&gt;-luoda tunnukset&lt;br&gt;-merkitä aloitus ja lopetus ajan töille/opiskelulle&lt;br&gt;-tarkastella kaikkien käyttäjien työaikoja&lt;br&gt;-asettaa tavoite/sovittuja työaikoja&lt;br&gt;-tarkistaa nopeasti ovatko käyttäjien tavoite ja toteutuneet työajat linjassa&lt;br&gt;&lt;font color=&quot;#ff562b&quot;&gt;-jättää viestiä kaikille käyttäjille&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="240" y="150" width="240" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="1iy0GvLkuGjbGDHnBuzD-8" value="&lt;ol&gt;&lt;li&gt;käyttäjän luominen ja tallentaminen&lt;/li&gt;&lt;li&gt;työaika tavoitteen asettaminen&lt;/li&gt;&lt;li&gt;työajan aloituksen ja lopetuksen syöttäminen ja tallentaminen&lt;/li&gt;&lt;li&gt;omien tavoite ja toteutuneiden työaikojen tarkastaminen&lt;/li&gt;&lt;li&gt;muiden tavoite ja toteutuneiden työaikojen seuranta&lt;/li&gt;&lt;li&gt;ohjelman jättävät viestit käyttäjlle&lt;/li&gt;&lt;li&gt;user interface luominen&lt;/li&gt;&lt;/ol&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="480" width="230" height="370" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
