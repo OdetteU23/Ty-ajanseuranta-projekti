@@ -17,3 +17,22 @@ C:\Users\Jussi Hakkarainen\source\repos\WpfApp3\WpfApp3\obj\Debug\net6.0-windows
 C:\Users\Jussi Hakkarainen\source\repos\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.pdb
 C:\Users\Jussi Hakkarainen\source\repos\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.genruntimeconfig.cache
 C:\Users\Jussi Hakkarainen\source\repos\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\ref\WpfApp3.dll
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\bin\Debug\net6.0-windows\WpfApp3.exe
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\bin\Debug\net6.0-windows\WpfApp3.deps.json
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\bin\Debug\net6.0-windows\WpfApp3.runtimeconfig.json
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\bin\Debug\net6.0-windows\WpfApp3.dll
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\bin\Debug\net6.0-windows\WpfApp3.pdb
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3_MarkupCompile.cache
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.g.resources
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.AssemblyInfoInputs.cache
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.AssemblyInfo.cs
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.csproj.CoreCompileInputs.cache
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.dll
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\refint\WpfApp3.dll
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.pdb
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.genruntimeconfig.cache
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\ref\WpfApp3.dll

@@ -8,19 +8,24 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Jussi Hakkarainen\\.nuget\\packages\\": {}
+    "C:\\Users\\lehto\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jussi Hakkarainen\\source\\repos\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
+      "projectUniqueName": "C:\\Users\\lehto\\OneDrive - Hämeen ammattikorkeakoulu\\Ohjelmistokehitys_projekti\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
       "projectName": "WpfApp3",
-      "projectPath": "C:\\Users\\Jussi Hakkarainen\\source\\repos\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
-      "packagesPath": "C:\\Users\\Jussi Hakkarainen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jussi Hakkarainen\\source\\repos\\WpfApp3\\WpfApp3\\obj\\",
+      "projectPath": "C:\\Users\\lehto\\OneDrive - Hämeen ammattikorkeakoulu\\Ohjelmistokehitys_projekti\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
+      "packagesPath": "C:\\Users\\lehto\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lehto\\OneDrive - Hämeen ammattikorkeakoulu\\Ohjelmistokehitys_projekti\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Jussi Hakkarainen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lehto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
