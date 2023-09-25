@@ -14,7 +14,7 @@ namespace WpfApp3
         {
             InitializeComponent();
         }
-
+        // tallennetaan tiedot painaessa save user information nappia
         private void OnSaveButtonClick(object sender, RoutedEventArgs e)
         {
             string username = usernameTextBox.Text.Trim();
@@ -28,7 +28,7 @@ namespace WpfApp3
 
                 try
                 {
-                    // Append the CSV line to the file
+                    
                     File.AppendAllLines(FileName, new[] { csvLine }, Encoding.UTF8);
 
                     string filePath = Path.GetFullPath(FileName);
@@ -44,7 +44,9 @@ namespace WpfApp3
                 MessageBox.Show("Please enter a valid username, start time, and end time.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+        //lähtee tekemään tähän väliin kohtaa joka lukee tiedostosta ja näyttää aikoja käyttäjälle
 
+        //
         private bool TryParseTime(string timeString, out DateTime result)
         {
             return DateTime.TryParseExact(timeString, "dd.MM.yyyy HH:mm", null, System.Globalization.DateTimeStyles.None, out result);
