@@ -23,6 +23,7 @@
         <TextBox x:Name="endTimeTextBox" Grid.Row="5" Margin="10" VerticalAlignment="Center"/>
 
         <Button Content="Save Username and Hours" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Click="OnSaveButtonClick"/>
+        <Button Content="see user data" Grid.Row="6" HorizontalAlignment="left" VerticalAlignment="Center" Margin="10" Click="SeeUserData"/>
     </Grid>
 
 
