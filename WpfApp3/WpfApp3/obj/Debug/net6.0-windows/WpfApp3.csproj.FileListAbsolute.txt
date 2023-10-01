@@ -36,3 +36,35 @@ C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\
 C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.pdb
 C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.genruntimeconfig.cache
 C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\ref\WpfApp3.dll
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\bin\Debug\net6.0-windows\WpfApp3.exe
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\bin\Debug\net6.0-windows\WpfApp3.deps.json
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\bin\Debug\net6.0-windows\WpfApp3.runtimeconfig.json
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\bin\Debug\net6.0-windows\WpfApp3.dll
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\bin\Debug\net6.0-windows\WpfApp3.pdb
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3_MarkupCompile.cache
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.g.resources
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.AssemblyInfoInputs.cache
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.AssemblyInfo.cs
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.csproj.CoreCompileInputs.cache
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.dll
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\refint\WpfApp3.dll
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.pdb
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.genruntimeconfig.cache
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\ref\WpfApp3.dll
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\StartWindow.baml
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\StartWindow.g.cs
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\Theme\MenuButtonTheme.baml
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MVVM\View\HomeView.g.cs
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3_MarkupCompile.lref
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\App.baml
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MVVM\View\HomeView.baml
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MVVM\View\CalendarView.g.cs
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MVVM\View\CalendarView2.g.cs
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MVVM\View\CalendarView.baml
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MVVM\View\CalendarView2.baml
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\Theme\CalendarButtonTheme.baml

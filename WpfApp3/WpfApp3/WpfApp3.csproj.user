@@ -7,7 +7,33 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="MVVM\View\CalendarView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\CalendarView2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\HomeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\CalendarView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\CalendarView2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\CalendarButtonTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\MenuButtonTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

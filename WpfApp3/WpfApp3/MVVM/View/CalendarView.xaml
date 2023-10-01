@@ -1,0 +1,360 @@
+﻿<UserControl x:Class="WpfApp3.MVVM.View.CalendarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="510" d:DesignWidth="700">
+    
+    <!--okay so this is VERTICAL CALENDAR. wIDE AND SHORT.-->
+    
+    
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Border Width="700"
+                Height="350"
+                Margin="0,0,0,0"
+                Background="White"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center">
+                
+        <!--MAKE IT LOOK LIKE OLD SOAPBAR YEAHHH VERY MODERN-->
+                
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                   RadiusY="10"
+                                   Rect="5,5,690,340"/>
+                </Border.Clip>
+
+        <!--aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa grid n1.-->
+                
+                <Grid Margin="10,10,10,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.7*"/>
+                    </Grid.RowDefinitions>
+
+        <!--some mf textboxes for day names-->
+                    
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="0"
+                               Text="Monday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+                    
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="1"
+                               Text="Tuesday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+                    
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="2"
+                               Text="Wednesday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+                    
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="3"
+                               Text="Thursday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+                    
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="4"
+                               Text="Friday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+                    
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="5"
+                               Text="Saturday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+                    
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="6"
+                               Text="Sunday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+
+            <!--stackpanel galore AND YES THEY ARE VERY GREY AND BORING-->
+
+                    <StackPanel x:Uid="DateMonthYearPanelMonday"
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Background="LightGray" Opacity="0.5">
+        <!--tänne sit päivä kuukausi ja vuosi tiedostosta jotenkin--> 
+                        <Rectangle Height="60"
+                                   Margin="3,3,3,3"
+                                   RadiusX="10"
+                                   RadiusY="10"
+                                   Fill="#EA2B">
+                        </Rectangle>
+                        
+                    </StackPanel>
+                    
+                    <StackPanel x:Uid="DateMonthYearPanelTuesday"
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Background="LightGray" Opacity="0.5">
+                                
+                    </StackPanel>
+                    
+                    <StackPanel x:Uid="DateMonthYearPanelWednesday"
+                                Grid.Row="1"
+                                Grid.Column="2"
+                                Background="LightGray" Opacity="0.5">
+                                
+                    </StackPanel>
+                    
+                    <StackPanel x:Uid="DateMonthYearPanelThursday"
+                                Grid.Row="1"
+                                Grid.Column="3"
+                                Background="LightGray" Opacity="0.5">
+                                
+                    </StackPanel>
+                    
+                    <StackPanel x:Uid="DateMonthYearPanelFriday"
+                                Grid.Row="1"
+                                Grid.Column="4"
+                                Background="LightGray" Opacity="0.5">
+                                
+                    </StackPanel>
+                    
+                    <StackPanel x:Uid="DateMonthYearPanelSaturday"
+                                Grid.Row="1"
+                                Grid.Column="5"
+                                Background="LightGray" Opacity="0.5">
+                                
+                    </StackPanel>
+                    
+                    <StackPanel x:Uid="DateMonthYearPanelSunday"
+                                Grid.Row="1"
+                                Grid.Column="6"
+                                Background="LightGray" Opacity="0.5">
+                                
+                    </StackPanel>
+                    
+               <!--MORE STACK PANELS FOR GRID GOD-->
+
+                    <StackPanel x:Uid="TimePanelMonday"
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                Background="LightGray" Opacity="0.5">
+
+                        <!--ok tää on nyt placeholder mut tänne pitäisi tulla aika näkyville 
+                        mut en tiedä miten se haetaan tiedostosta, kysyn maanantaina
+                        JOS sen saa toimimaan, kopioin vaa muuallekin-->
+
+                        <Rectangle Height="40"
+                                   Margin="3,3,3,3"
+                                   RadiusX="10"
+                                   RadiusY="10"
+                                   Fill="#eA7">
+
+                        </Rectangle>
+                                
+                    </StackPanel>
+
+                    <StackPanel x:Uid="TimePanelTuesday"
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="TimePanelWednesday"
+                                Grid.Row="2"
+                                Grid.Column="2"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="TimePanelThursday"
+                                Grid.Row="2"
+                                Grid.Column="3"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="TimePanelFriday"
+                                Grid.Row="2"
+                                Grid.Column="4"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="TimePanelSaturday"
+                                Grid.Row="2"
+                                Grid.Column="5"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="TimePanelSunday"
+                                Grid.Row="2"
+                                Grid.Column="6"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+                    
+
+
+                </Grid>
+
+            </Border>
+
+            <StackPanel Height="50"
+                        Orientation="Horizontal">
+                <Border Width="700"
+                Height="50"
+                Margin="0,0,0,0"
+                Background="White"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center">
+
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10"
+                   RadiusY="10"
+                   Rect="5,5,690,40"/>
+                    </Border.Clip>
+
+
+                    <Grid Background="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.7*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Background="LightGray"
+                                    Grid.Column="0"
+                                    Orientation="Horizontal">
+                            <Label Content="Total hours:"
+                                   Margin="10"
+                                   HorizontalAlignment="Left"
+                                   />
+                            <TextBlock ContentElement.TextInput="TextBlock_TextInput"
+                                       Width="60"
+                                       Height="20"
+                                       Margin="40,0,0,0"
+                                       HorizontalAlignment="Right"
+                                       Background="White"/>
+                        </StackPanel>
+                        
+                        <StackPanel Background="Transparent"
+                                    Grid.Column="1"
+                                    Orientation="Horizontal"
+                                    HorizontalAlignment="Left" 
+                                    Margin="300,0,0,0" 
+                                    Width="190">
+                            
+                            <Label Content="Goal:"
+                                   Margin="10"
+                                   HorizontalAlignment="Left"
+                                   />
+                            <TextBox ContentElement.TextInput="TextBlock_TextInput"
+                                       Width="60"
+                                       Height="20"
+                                       Margin="40,0,0,0"
+                                       HorizontalAlignment="Right"
+                                       Background="White"/>
+                        </StackPanel>
+                                                
+                    </Grid>
+                </Border>
+            </StackPanel>
+            
+            <StackPanel Height="110"
+                        Orientation="Horizontal">
+                <Border Width="700"
+                Height="100"
+                Margin="0,0,0,0"
+                Background="Transparent"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center">
+
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10"
+                   RadiusY="10"
+                   Rect="5,5,690,90"/>
+                    </Border.Clip>
+
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.25*"/>
+                            <ColumnDefinition Width="0.25*"/>
+                            <ColumnDefinition Width="0.25*"/>
+                            <ColumnDefinition Width="0.25*"/>
+                            
+                        </Grid.ColumnDefinitions>
+                        
+                        <StackPanel Grid.Column="0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Button x:Name="ButtonAdd" 
+                                         Content="Add"
+                                         Width="80"
+                                         Height="30"
+                                         Background="#859424"
+                                         Click="OnButtonAdd_Click" ClickMode="Press"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Button x:Name="ButtonPreious" 
+                                         Content="Previous"
+                                         Width="80"
+                                         Height="30"
+                                         Background="#859424"
+                                         Click="OnButtonAdd_Click" ClickMode="Press"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="3"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Button x:Name="ButtonNext" 
+                                         Content="Next"
+                                         Width="80"
+                                         Height="30"
+                                         Background="#859424"
+                                         Click="OnButtonAdd_Click" ClickMode="Press"/>
+                        </StackPanel>
+
+                        
+                                                
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+
+    </StackPanel>
+</UserControl>
