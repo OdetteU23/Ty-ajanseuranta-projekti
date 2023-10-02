@@ -260,7 +260,8 @@
                                    Margin="10"
                                    HorizontalAlignment="Left"
                                    />
-                            <TextBlock ContentElement.TextInput="TextBlock_TextInput"
+                            <TextBlock x:Name="TotalHoursTextBlock"
+                                       ContentElement.TextInput="TextBlock_TextInput"
                                        Width="60"
                                        Height="20"
                                        Margin="40,0,0,0"
@@ -325,6 +326,17 @@
                                          Height="30"
                                          Background="#859424"
                                          Click="OnButtonAdd_Click" ClickMode="Press"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Button x:Name="ButtonShow" 
+                                         Content="Show"
+                                         Width="80"
+                                         Height="30"
+                                         Background="#859424"
+                                         Click="OnButtonShow_Click" ClickMode="Press"/>
                         </StackPanel>
 
                         <StackPanel Grid.Column="2"

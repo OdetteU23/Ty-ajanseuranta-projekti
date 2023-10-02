@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static WpfApp3.MainWindow;
 
 namespace WpfApp3.MVVM.View
 {
@@ -20,6 +21,11 @@ namespace WpfApp3.MVVM.View
     /// </summary>
     public partial class CalendarView : UserControl
     {
+        List<UserData> userDataList = new List<UserData>();
+
+        string username = "Jussi";
+
+
         public CalendarView()
         {
             InitializeComponent();
@@ -52,6 +58,25 @@ namespace WpfApp3.MVVM.View
             new MainWindow().Show();
             
         }
-        
+
+        void OnButtonShow_Click(object sender, RoutedEventArgs e)
+        {
+            //ö luetaan tietokanta ja haetaan sieltä JUSSIN tiedot
+            userDataList = CsvDataReader.ReadCsv("user_data.csv");
+
+            var userDataForSelectedUser = userDataList.Where(data => data.Username == username);
+            double totalHours = 0;
+
+            
+            foreach (var data in userDataForSelectedUser)
+            {
+                //täs on vielä se homma joka laskee jussin tiedot
+                double hoursWorked = (data.EndTime - data.StartTime).TotalHours;
+                totalHours += hoursWorked;
+                
+            }
+
+            TotalHoursTextBlock.Text = totalHours.ToString();
+        }
     }
 }
