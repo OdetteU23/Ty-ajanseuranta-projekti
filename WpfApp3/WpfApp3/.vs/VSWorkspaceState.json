@@ -6,8 +6,10 @@
     "\\Core",
     "\\Images",
     "\\MVVM",
+    "\\MVVM\\View",
+    "\\MVVM\\ViewModel",
     "\\Theme"
   ],
-  "SelectedNode": "\\App.xaml.cs",
+  "SelectedNode": "\\MVVM\\View\\CalendarView2.xaml",
   "PreviewInSolutionExplorer": true
 }
