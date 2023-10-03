@@ -2,8 +2,25 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfApp3"
-             StartupUri="MainWindow.xaml">
+             xmlns:viewModel="clr-namespace:WpfApp3.MVVM.ViewModel"
+             xmlns:view="clr-namespace:WpfApp3.MVVM.View"
+             StartupUri="StartWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/CalendarButtonTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+                        <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:CalendarViewModel}">
+                <view:CalendarView/>
+            </DataTemplate>
+            
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
