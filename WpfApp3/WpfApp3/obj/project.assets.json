@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\lehto\\.nuget\\packages\\": {},
+    "C:\\Users\\mikae\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lehto\\OneDrive - Hämeen ammattikorkeakoulu\\Ohjelmistokehitys_projekti\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
+      "projectUniqueName": "C:\\Users\\mikae\\Desktop\\PROJEKTI\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
       "projectName": "WpfApp3",
-      "projectPath": "C:\\Users\\lehto\\OneDrive - Hämeen ammattikorkeakoulu\\Ohjelmistokehitys_projekti\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
-      "packagesPath": "C:\\Users\\lehto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lehto\\OneDrive - Hämeen ammattikorkeakoulu\\Ohjelmistokehitys_projekti\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\obj\\",
+      "projectPath": "C:\\Users\\mikae\\Desktop\\PROJEKTI\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
+      "packagesPath": "C:\\Users\\mikae\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mikae\\Desktop\\PROJEKTI\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lehto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mikae\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

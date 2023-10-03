@@ -1,0 +1,244 @@
+﻿<UserControl x:Class="WpfApp3.MVVM.View.CalendarView2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="510" d:DesignWidth="700">
+
+    <!--okay so this is HORIZONTAL CALENDAR. wIDE AND SHORT.-->
+
+
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Border Width="700"
+                Height="350"
+                Margin="0,0,0,0"
+                Background="White"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center">
+
+                <!--MAKE IT LOOK LIKE OLD SOAPBAR YEAHHH VERY MODERN-->
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                   RadiusY="10"
+                                   Rect="5,5,690,340"/>
+                </Border.Clip>
+
+                <!--aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa grid n1.-->
+
+                <Grid Margin="10,10,10,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.1*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="0.7*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--some mf textboxes for day names-->
+
+                    <TextBlock Grid.Row="0"
+                               Grid.Column="0"
+                               Text="Monday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+
+                    <TextBlock Grid.Row="1"
+                               Grid.Column="0"
+                               Text="Tuesday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+
+                    <TextBlock Grid.Row="2"
+                               Grid.Column="0"
+                               Text="Wednesday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+
+                    <TextBlock Grid.Row="3"
+                               Grid.Column="0"
+                               Text="Thursday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+
+                    <TextBlock Grid.Row="4"
+                               Grid.Column="0"
+                               Text="Friday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+
+                    <TextBlock Grid.Row="5"
+                               Grid.Column="0"
+                               Text="Saturday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+
+                    <TextBlock Grid.Row="6"
+                               Grid.Column="0"
+                               Text="Sunday"
+					           VerticalAlignment="Center"
+					           HorizontalAlignment="Center"
+					           Foreground="Black"
+					           FontSize="14"/>
+
+                    <!--stackpanel galore AND YES THEY ARE VERY GREY AND BORING-->
+
+                    <StackPanel x:Uid="DateMonthYearPanelMonday"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Background="LightGray" Opacity="0.5">
+                        <!--tänne sit päivä kuukausi ja vuosi tiedostosta jotenkin-->
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="DateMonthYearPanelTuesday"
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="DateMonthYearPanelWednesday"
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="DateMonthYearPanelThursday"
+                                Grid.Row="3"
+                                Grid.Column="0"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="DateMonthYearPanelFriday"
+                                Grid.Row="4"
+                                Grid.Column="0"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="DateMonthYearPanelSaturday"
+                                Grid.Row="5"
+                                Grid.Column="0"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="DateMonthYearPanelSunday"
+                                Grid.Row="6"
+                                Grid.Column="0"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <!--MORE STACK PANELS FOR GRID GOD-->
+
+                    <StackPanel x:Uid="TimePanelMonday"
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Background="LightGray" Opacity="0.5">
+
+                        <!--ok tää on nyt placeholder mut tänne pitäisi tulla aika näkyville 
+                        mut en tiedä miten se haetaan tiedostosta, kysyn maanantaina
+                        JOS sen saa toimimaan, kopioin vaa muuallekin-->
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="TimePanelTuesday"
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="TimePanelWednesday"
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="TimePanelThursday"
+                                Grid.Row="3"
+                                Grid.Column="1"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="TimePanelFriday"
+                                Grid.Row="4"
+                                Grid.Column="1"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="TimePanelSaturday"
+                                Grid.Row="5"
+                                Grid.Column="1"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel x:Uid="TimePanelSunday"
+                                Grid.Row="6"
+                                Grid.Column="1"
+                                Background="LightGray" Opacity="0.5">
+
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="0"
+                                Grid.Column="2">
+                        <Rectangle Height="40"
+                                   Width="100"
+                                   FlowDirection="LeftToRight"
+                                   HorizontalAlignment="Left"
+                                   Margin="3,3,3,3"
+                                   RadiusX="10"
+                                   RadiusY="10"
+                                   Fill="#eA7">
+
+                        </Rectangle>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="0"
+                                Grid.Column="1">
+                        <Rectangle Height="40"
+                                   Margin="3,3,3,3"
+                                   RadiusX="10"
+                                   RadiusY="10"
+                                   Fill="#EA2B">    
+                        </Rectangle>
+                    </StackPanel>
+                </Grid>
+
+            </Border>
+        </StackPanel>
+
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin",
+    "\\bin\\Release",
+    "\\Core",
+    "\\Images",
+    "\\MVVM",
+    "\\MVVM\\View",
+    "\\MVVM\\ViewModel",
+    "\\Theme"
+  ],
+  "SelectedNode": "\\MVVM\\View\\CalendarView2.xaml",
+  "PreviewInSolutionExplorer": true
+}
