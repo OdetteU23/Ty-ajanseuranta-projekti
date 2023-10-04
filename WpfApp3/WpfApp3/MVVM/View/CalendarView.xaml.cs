@@ -80,8 +80,8 @@ namespace WpfApp3.MVVM.View
         // nappi. nappi joka jopa ehkä toimii
         void OnButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            new Compare().Show();
-           // new MainWindow().Show();
+        
+           new MainWindow().Show();
         }
 
         //uuuuuuuu oikeesti toimii 
@@ -110,27 +110,15 @@ namespace WpfApp3.MVVM.View
 
         void OnButtonPrevious_Click(object sender, RoutedEventArgs e)
         {
-            new Compare().Show();
+            
           
             
         }
 
         void OnButtonShow_Click(object sender, RoutedEventArgs e)
         {
-            //ö luetaan tietokanta ja haetaan sieltä JUSSIN tiedot
-            userDataList = CsvDataReader.ReadCsv("user_data.csv");
 
-            var userDataForSelectedUser = userDataList.Where(data => data.Username == username);
-            double totalHours = 0;
-
-            
-            foreach (var data in userDataForSelectedUser)
-            {
-                //täs on vielä se homma joka laskee jussin tiedot
-                double hoursWorked = (data.EndTime - data.StartTime).TotalHours;
-                totalHours += hoursWorked;
-                
-            }
+            new Compare().Show();
 
             TotalHoursTextBlock.Text = totalHours.ToString();
         }
