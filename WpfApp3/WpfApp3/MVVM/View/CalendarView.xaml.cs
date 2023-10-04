@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static WpfApp3.MainWindow;
 
+
 namespace WpfApp3.MVVM.View
 {
     /// <summary>
@@ -24,11 +25,21 @@ namespace WpfApp3.MVVM.View
         List<UserData> userDataList = new List<UserData>();
 
         string username = "Jussi";
-        DateTime currentDate = DateTime.Now;
+        DateTime mondayDate;
+        DateTime tuesdayDate;
+        DateTime wednesdayDate;
+        DateTime thursdayDate;
+        DateTime fridayDate;
+        DateTime saturdayDate;
+        DateTime sundayDate;
+        
+
+
 
         public CalendarView()
         {
             InitializeComponent();
+
             DateTime mondayDate = GetMondayOfCurrentWeek(DateTime.Now);
             mondayDateTextBox.Text = mondayDate.ToString("dd/MM");
 
@@ -69,23 +80,38 @@ namespace WpfApp3.MVVM.View
         // nappi. nappi joka jopa ehkä toimii
         void OnButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-          new MainWindow().Show();
+            new Compare().Show();
+           // new MainWindow().Show();
         }
 
         //uuuuuuuu oikeesti toimii 
         void OnButtonNext_Click(object sender, RoutedEventArgs e)
         {
-          new MainWindow().Show();
-            
-          new MainWindow().Show();
-          
+            // liseteen jokaiseen päivään 7 päivää (ensiviikko)
+            mondayDate = mondayDate.AddDays(7);
+            tuesdayDate = tuesdayDate.AddDays(7);
+            wednesdayDate = wednesdayDate.AddDays(7);
+            thursdayDate = thursdayDate.AddDays(7);
+            fridayDate = fridayDate.AddDays(7);
+            saturdayDate = saturdayDate.AddDays(7);
+            sundayDate = sundayDate.AddDays(7);
+
+            // päiviteteen teksti kentät
+            mondayDateTextBox.Text = mondayDate.ToString("dd/MM");
+            tuesdayDateTextBox.Text = tuesdayDate.ToString("dd/MM");
+            wednesdayDateTextBox.Text = wednesdayDate.ToString("dd/MM");
+            thursdayDateTextBox.Text = thursdayDate.ToString("dd/MM");
+            fridayDateTextBox.Text = fridayDate.ToString("dd/MM");
+            saturdayDateTextBox.Text = saturdayDate.ToString("dd/MM");
+            sundayDateTextBox.Text = sundayDate.ToString("dd/MM");
         }
 
         //eheheheh jeccu? >:D eipä ollukkaan ku en osaa
-        
+
         void OnButtonPrevious_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
+            new Compare().Show();
+          
             
         }
 

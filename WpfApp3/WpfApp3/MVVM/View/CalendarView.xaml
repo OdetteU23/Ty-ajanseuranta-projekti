@@ -352,7 +352,7 @@
                                          Width="80"
                                          Height="30"
                                          Background="#859424"
-                                         Click="OnButtonAdd_Click" ClickMode="Press"/>
+                                         Click="OnButtonNext_Click" ClickMode="Press"/>
                         </StackPanel>
 
                         

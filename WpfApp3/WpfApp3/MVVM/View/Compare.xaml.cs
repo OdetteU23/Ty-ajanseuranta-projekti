@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Tavoiteltut_ja_toteutuneet
+namespace WpfApp3.MVVM.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Compare : Window
     {
-        public MainWindow()
+        public Compare()
         {
             InitializeComponent();
         }
