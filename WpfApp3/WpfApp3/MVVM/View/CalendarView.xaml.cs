@@ -112,7 +112,7 @@ namespace WpfApp3.MVVM.View
         {
             
           
-            
+           
         }
 
         void OnButtonShow_Click(object sender, RoutedEventArgs e)
@@ -120,7 +120,7 @@ namespace WpfApp3.MVVM.View
 
             new Compare().Show();
 
-            TotalHoursTextBlock.Text = totalHours.ToString();
+ 
         }
     }
 }
