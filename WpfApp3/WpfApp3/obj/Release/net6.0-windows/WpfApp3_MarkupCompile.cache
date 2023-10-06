@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\mikae\Desktop\PROJEKTI\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Release\net6.0-windows\
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\WpfApp3\WpfApp3\obj\Release\net6.0-windows\
 WpfApp3
 none
 false
 TRACE;RELEASE;NET;NET6_0;NETCOREAPP
-C:\Users\mikae\Desktop\PROJEKTI\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\App.xaml
-7711747678
+C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\WpfApp3\WpfApp3\App.xaml
+8-835238016
 
-13-830632110
+14-285632143
 194726069201
-MainWindow.xaml;MVVM\View\CalendarView.xaml;MVVM\View\CalendarView2.xaml;MVVM\View\HomeView.xaml;StartWindow.xaml;Theme\CalendarButtonTheme.xaml;Theme\MenuButtonTheme.xaml;
+MainWindow.xaml;MVVM\View\CalendarView.xaml;MVVM\View\CalendarView2.xaml;MVVM\View\Compare.xaml;MVVM\View\HomeView.xaml;StartWindow.xaml;Theme\CalendarButtonTheme.xaml;Theme\MenuButtonTheme.xaml;
 
 True
 
