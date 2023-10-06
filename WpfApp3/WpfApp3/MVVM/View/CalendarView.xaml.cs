@@ -22,7 +22,7 @@ namespace WpfApp3.MVVM.View
     /// </summary>
     public partial class CalendarView : UserControl
     {
-        List<UserData> userDataList = new List<UserData>();
+       
 
         string username = "Jussi";
         private DateTime mondayDate;

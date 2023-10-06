@@ -10,141 +10,53 @@ namespace WpfApp3
     public partial class MainWindow : Window
     {
         private const string FileName = "user_data.csv";
-        private List<UserData> userDataList = new List<UserData>();
+        private string FilePath => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FileName);
+
 
         public MainWindow()
         {
             InitializeComponent();
-            userDataList = CsvDataReader.ReadCsv(FileName);
-            PopulateUserComboBox();
+        
+          
         }
 
-        public class UserData
-        {
-            public string? Username { get; set; }
-            public DateTime StartTime { get; set; }
-            public DateTime EndTime { get; set; }
-        }
-
-        public class CsvDataReader
-        {
-            public static List<UserData> ReadCsv(string filePath)
-            {
-                List<UserData> userDataList = new List<UserData>();
-
-                try
-                {
-                    using (var reader = new StreamReader(filePath))
-                    {
-                        while (!reader.EndOfStream)
-                        {
-                            var line = reader.ReadLine();
-                            var values = line.Split(',');
-
-                            if (values.Length == 3 &&
-                                DateTime.TryParseExact(values[1], "dd.MM.yyyy HH:mm", null, System.Globalization.DateTimeStyles.None, out DateTime startTime) &&
-                                DateTime.TryParseExact(values[2], "dd.MM.yyyy HH:mm", null, System.Globalization.DateTimeStyles.None, out DateTime endTime))
-                            {
-                                var userData = new UserData
-                                {
-                                    Username = values[0],
-                                    StartTime = startTime,
-                                    EndTime = endTime
-                                };
-
-                                userDataList.Add(userData);
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error reading CSV file: {ex.Message}");
-                }
-
-                return userDataList;
-            }
-        }
-
-        private void PopulateUserComboBox()
-        {
-            var distinctUsernames = userDataList.Select(data => data.Username).Distinct().ToList();
-            userComboBox.ItemsSource = distinctUsernames;
-        }
-
-        private void SeeUserData(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                string? selectedUsername = userComboBox?.SelectedItem as string;
-
-                if (string.IsNullOrEmpty(selectedUsername))
-                {
-                    MessageBox.Show("Please select a username.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-
-                var userDataForSelectedUser = userDataList.Where(data => data.Username == selectedUsername);
-                double totalHours = 0;
-
-                StringBuilder userDataBuilder = new StringBuilder();
-                foreach (var data in userDataForSelectedUser)
-                {
-                    double hoursWorked = (data.EndTime - data.StartTime).TotalHours;
-                    totalHours += hoursWorked;
-                    userDataBuilder.AppendLine($"Start Time: {data.StartTime}, End Time: {data.EndTime}, Hours Worked: {hoursWorked:F2} hours");
-                }
-
-                MessageBox.Show($"User: {selectedUsername}\n\n{userDataBuilder.ToString()}\nTotal Hours Worked: {totalHours:F2} hours", "User Data", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error reading and processing CSV data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        private bool TryParseTime(string timeString, out DateTime result)
-        {
-            return DateTime.TryParseExact(timeString, "dd.MM.yyyy HH:mm", null, System.Globalization.DateTimeStyles.None, out result);
-        }
-
+        //tallentaa tiedet csv tiedostoon
         private void OnSaveButtonClick(object sender, RoutedEventArgs e)
         {
             string username = usernameTextBox.Text.Trim();
+            DateTime date = datePicker.SelectedDate ?? DateTime.MinValue; // Get the selected date from the DatePicker
             DateTime startTime;
             DateTime endTime;
 
-            // Parse start time
-            if (!TryParseTime(startTimeTextBox.Text, out startTime))
+            if (!TryParseTime(startTimeTextBox.Text, date, out startTime))
             {
                 MessageBox.Show("Please enter a valid start time.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            // Parse end time
-            if (!TryParseTime(endTimeTextBox.Text, out endTime))
+            if (!TryParseTime(endTimeTextBox.Text, date, out endTime))
             {
                 MessageBox.Show("Please enter a valid end time.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            string csvLine = $"{username},{startTime.ToString("dd.MM.yyyy HH:mm")},{endTime.ToString("dd.MM.yyyy HH:mm")}";
+            // CSV muoto username, date, starttime, and endtime
+            string csvLine = $"{username},{date.ToString("dd.MM.yyyy")},{startTime.ToString("HH:mm")},{endTime.ToString("HH:mm")}";
 
             try
             {
-                File.AppendAllLines(FileName, new[] { csvLine }, Encoding.UTF8);
-
-                // Update the user data list and the ComboBox
-                userDataList.Add(new UserData
+                // luodaan uusi tiedosto jos vanhaa ei ole
+                if (!File.Exists(FilePath))
                 {
-                    Username = username,
-                    StartTime = startTime,
-                    EndTime = endTime
-                });
-                PopulateUserComboBox();
+             
+                    string header = "Username,Date,StartTime,EndTime";
+                    File.WriteAllText(FilePath, header + Environment.NewLine);
+                }
 
-                string filePath = Path.GetFullPath(FileName);
-                MessageBox.Show($"Data saved to: {filePath}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                // Luodaan uusi rivi tietoa
+                File.AppendAllText(FilePath, csvLine + Environment.NewLine);
+
+                MessageBox.Show($"Data saved to: {FilePath}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
@@ -152,6 +64,11 @@ namespace WpfApp3
             }
         }
 
+        private bool TryParseTime(string timeString, DateTime date, out DateTime result)
+        {
+            string combinedDateTimeString = $"{date.ToString("dd.MM.yyyy")} {timeString}";
+            return DateTime.TryParseExact(combinedDateTimeString, "dd.MM.yyyy HH:mm", null, System.Globalization.DateTimeStyles.None, out result);
+        }
 
     }
 }
