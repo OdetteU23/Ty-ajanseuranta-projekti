@@ -134,3 +134,5 @@ C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\
 C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.pdb
 C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.genruntimeconfig.cache
 C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\Ohjelmistokehitys_projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\ref\WpfApp3.dll
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MVVM\View\Compare.g.cs
+C:\Users\Mikael\Desktop\tyoapp\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MVVM\View\Compare.baml
