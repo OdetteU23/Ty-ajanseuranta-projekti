@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static WpfApp3.MainWindow;
+using System.IO;
 
 
 namespace WpfApp3.MVVM.View
@@ -22,7 +23,7 @@ namespace WpfApp3.MVVM.View
     /// </summary>
     public partial class CalendarView : UserControl
     {
-       
+
 
         string username = "Jussi";
         private DateTime mondayDate;
@@ -32,6 +33,13 @@ namespace WpfApp3.MVVM.View
         private DateTime fridayDate;
         private DateTime saturdayDate;
         private DateTime sundayDate;
+        public string mondayDateLong;
+        public string tuesdayDateLong;
+        public string wednesdayDateLong;
+        public string thursdayDateLong;
+        public string fridayDateLong;
+        public string saturdayDateLong;
+        public string sundayDateLong;
 
 
 
@@ -41,25 +49,34 @@ namespace WpfApp3.MVVM.View
             InitializeComponent();
 
             mondayDate = GetMondayOfCurrentWeek(DateTime.Now);
+            mondayDateLong = mondayDate.ToString("dd.MM.yyyy");
             mondayDateTextBox.Text = mondayDate.ToString("dd/MM");
 
             tuesdayDate = mondayDate.AddDays(1);
+            tuesdayDateLong = tuesdayDate.ToString("dd.MM.yyyy");
             tuesdayDateTextBox.Text = tuesdayDate.ToString("dd/MM");
 
             wednesdayDate = mondayDate.AddDays(2);
+            wednesdayDateLong = wednesdayDate.ToString("dd.MM.yyyy");
             wednesdayDateTextBox.Text = wednesdayDate.ToString("dd/MM");
 
             thursdayDate = mondayDate.AddDays(3);
+            thursdayDateLong = thursdayDate.ToString("dd.MM.yyyy");
             thursdayDateTextBox.Text = thursdayDate.ToString("dd/MM");
 
             fridayDate = mondayDate.AddDays(4);
+            fridayDateLong = fridayDate.ToString("dd.MM.yyyy");
             fridayDateTextBox.Text = fridayDate.ToString("dd/MM");
 
             saturdayDate = mondayDate.AddDays(5);
+            saturdayDateLong = saturdayDate.ToString("dd.MM.yyyy");
             saturdayDateTextBox.Text = saturdayDate.ToString("dd/MM");
 
             sundayDate = mondayDate.AddDays(6);
+            sundayDateLong = sundayDate.ToString("dd.MM.yyyy");
             sundayDateTextBox.Text = sundayDate.ToString("dd/MM");
+
+            UpdateDisplayForCurrentWeek();
 
 
         }
@@ -96,6 +113,14 @@ namespace WpfApp3.MVVM.View
             saturdayDate = saturdayDate.AddDays(7);
             sundayDate = sundayDate.AddDays(7);
 
+            mondayDateLong = mondayDate.ToString("dd.MM.yyyy");
+            tuesdayDateLong = tuesdayDate.ToString("dd.MM.yyyy");
+            wednesdayDateLong = wednesdayDate.ToString("dd.MM.yyyy");
+            thursdayDateLong = thursdayDate.ToString("dd.MM.yyyy");
+            fridayDateLong = fridayDate.ToString("dd.MM.yyyy");
+            saturdayDateLong = saturdayDate.ToString("dd.MM.yyyy");
+            sundayDateLong = sundayDate.ToString("dd.MM.yyyy");
+
             // päiviteteen teksti kentät
             mondayDateTextBox.Text = mondayDate.ToString("dd/MM");
             tuesdayDateTextBox.Text = tuesdayDate.ToString("dd/MM");
@@ -104,13 +129,15 @@ namespace WpfApp3.MVVM.View
             fridayDateTextBox.Text = fridayDate.ToString("dd/MM");
             saturdayDateTextBox.Text = saturdayDate.ToString("dd/MM");
             sundayDateTextBox.Text = sundayDate.ToString("dd/MM");
+
+            UpdateDisplayForCurrentWeek();
         }
 
-        //eheheheh jeccu? >:D eipä ollukkaan ku en osaa
 
         void OnButtonPrevious_Click(object sender, RoutedEventArgs e)
         {
             mondayDate = mondayDate.AddDays(-7);
+
             tuesdayDate = tuesdayDate.AddDays(-7);
             wednesdayDate = wednesdayDate.AddDays(-7);
             thursdayDate = thursdayDate.AddDays(-7);
@@ -118,6 +145,14 @@ namespace WpfApp3.MVVM.View
             saturdayDate = saturdayDate.AddDays(-7);
             sundayDate = sundayDate.AddDays(-7);
 
+            mondayDateLong = mondayDate.ToString("dd.MM.yyyy");
+            tuesdayDateLong = tuesdayDate.ToString("dd.MM.yyyy");
+            wednesdayDateLong = wednesdayDate.ToString("dd.MM.yyyy");
+            thursdayDateLong = thursdayDate.ToString("dd.MM.yyyy");
+            fridayDateLong = fridayDate.ToString("dd.MM.yyyy");
+            saturdayDateLong = saturdayDate.ToString("dd.MM.yyyy");
+            sundayDateLong = sundayDate.ToString("dd.MM.yyyy");
+
             // päiviteteen teksti kentät
             mondayDateTextBox.Text = mondayDate.ToString("dd/MM");
             tuesdayDateTextBox.Text = tuesdayDate.ToString("dd/MM");
@@ -127,7 +162,285 @@ namespace WpfApp3.MVVM.View
             saturdayDateTextBox.Text = saturdayDate.ToString("dd/MM");
             sundayDateTextBox.Text = sundayDate.ToString("dd/MM");
 
+            UpdateDisplayForCurrentWeek();
+        }
+        private void ReadCsvAndDisplayTimesMon(string username)
+        {
+            // sanoo että user.data on samassa kansiossa kui exe
+            string executablePath = AppDomain.CurrentDomain.BaseDirectory;
+            string csvFilePath = "user_data.csv";
+            csvFilePath = System.IO.Path.Combine(executablePath, csvFilePath);
+            // lukee csv tiedosten
+            string[] csvLines = File.ReadAllLines(csvFilePath);
 
+            // listaa  täsmäävät ajat
+            List<string> matchingEntries = new List<string>();
+
+            matchingEntries = csvLines
+                .Where(line =>
+                {
+                    string[] parts = line.Split(',');
+                    return parts.Length == 4 && parts[0] == username && parts[1] == mondayDateLong;
+                })
+                .ToList();
+
+            // päivitetään maanantai laatikko täsmäävän ajan aloitus-lopetus ajalla
+            if (matchingEntries.Count > 0)
+            {
+                string[] parts = matchingEntries[0].Split(',');
+                string startTime = parts[2];
+                string endTime = parts[3];
+                string formattedTimes = $"{startTime}-{endTime}";
+
+                Mondayworktimes.Text = formattedTimes;
+
+
+            }
+            else
+            {
+                // ei löydetty aikaa
+                Mondayworktimes.Text = "no time found";
+            }
+        }
+        private void ReadCsvAndDisplayTimesTue(string username)
+        {
+            // sanoo että user.data on samassa kansiossa kui exe
+            string executablePath = AppDomain.CurrentDomain.BaseDirectory;
+            string csvFilePath = "user_data.csv";
+            csvFilePath = System.IO.Path.Combine(executablePath, csvFilePath);
+            // lukee csv tiedosten
+            string[] csvLines = File.ReadAllLines(csvFilePath);
+
+            // listaa  täsmäävät ajat
+            List<string> matchingEntries = new List<string>();
+
+            matchingEntries = csvLines
+                .Where(line =>
+                {
+                    string[] parts = line.Split(',');
+                    return parts.Length == 4 && parts[0] == username && parts[1] == tuesdayDateLong;
+                })
+                .ToList();
+
+            // päivitetään maanantai laatikko täsmäävän ajan aloitus-lopetus ajalla
+            if (matchingEntries.Count > 0)
+            {
+                string[] parts = matchingEntries[0].Split(',');
+                string startTime = parts[2];
+                string endTime = parts[3];
+                string formattedTimes = $"{startTime}-{endTime}";
+
+                Tuesdayworktimes.Text = formattedTimes;
+
+
+            }
+            else
+            {
+                // ei löydetty aikaa
+                Tuesdayworktimes.Text = "no time found";
+            }
+        }
+        private void ReadCsvAndDisplayTimesWed(string username)
+        {
+            // sanoo että user.data on samassa kansiossa kui exe
+            string executablePath = AppDomain.CurrentDomain.BaseDirectory;
+            string csvFilePath = "user_data.csv";
+            csvFilePath = System.IO.Path.Combine(executablePath, csvFilePath);
+            // lukee csv tiedosten
+            string[] csvLines = File.ReadAllLines(csvFilePath);
+
+            // listaa  täsmäävät ajat
+            List<string> matchingEntries = new List<string>();
+
+            matchingEntries = csvLines
+                .Where(line =>
+                {
+                    string[] parts = line.Split(',');
+                    return parts.Length == 4 && parts[0] == username && parts[1] == wednesdayDateLong;
+                })
+                .ToList();
+
+            // päivitetään maanantai laatikko täsmäävän ajan aloitus-lopetus ajalla
+            if (matchingEntries.Count > 0)
+            {
+                string[] parts = matchingEntries[0].Split(',');
+                string startTime = parts[2];
+                string endTime = parts[3];
+                string formattedTimes = $"{startTime}-{endTime}";
+
+                Wednesdayworktimes.Text = formattedTimes;
+
+
+            }
+            else
+            {
+                // ei löydetty aikaa
+                Wednesdayworktimes.Text = "no time found";
+            }
+        }
+        private void ReadCsvAndDisplayTimesThu(string username)
+        {
+            // sanoo että user.data on samassa kansiossa kui exe
+            string executablePath = AppDomain.CurrentDomain.BaseDirectory;
+            string csvFilePath = "user_data.csv";
+            csvFilePath = System.IO.Path.Combine(executablePath, csvFilePath);
+            // lukee csv tiedosten
+            string[] csvLines = File.ReadAllLines(csvFilePath);
+
+            // listaa  täsmäävät ajat
+            List<string> matchingEntries = new List<string>();
+
+            matchingEntries = csvLines
+                .Where(line =>
+                {
+                    string[] parts = line.Split(',');
+                    return parts.Length == 4 && parts[0] == username && parts[1] == thursdayDateLong;
+                })
+                .ToList();
+
+            // päivitetään maanantai laatikko täsmäävän ajan aloitus-lopetus ajalla
+            if (matchingEntries.Count > 0)
+            {
+                string[] parts = matchingEntries[0].Split(',');
+                string startTime = parts[2];
+                string endTime = parts[3];
+                string formattedTimes = $"{startTime}-{endTime}";
+
+                Thursdayworktimes.Text = formattedTimes;
+
+
+            }
+            else
+            {
+                // ei löydetty aikaa
+                Thursdayworktimes.Text = "no time found";
+            }
+        }
+        private void ReadCsvAndDisplayTimesFri(string username)
+        {
+            // sanoo että user.data on samassa kansiossa kui exe
+            string executablePath = AppDomain.CurrentDomain.BaseDirectory;
+            string csvFilePath = "user_data.csv";
+            csvFilePath = System.IO.Path.Combine(executablePath, csvFilePath);
+            // lukee csv tiedosten
+            string[] csvLines = File.ReadAllLines(csvFilePath);
+
+            // listaa  täsmäävät ajat
+            List<string> matchingEntries = new List<string>();
+
+            matchingEntries = csvLines
+                .Where(line =>
+                {
+                    string[] parts = line.Split(',');
+                    return parts.Length == 4 && parts[0] == username && parts[1] == fridayDateLong;
+                })
+                .ToList();
+
+            // päivitetään maanantai laatikko täsmäävän ajan aloitus-lopetus ajalla
+            if (matchingEntries.Count > 0)
+            {
+                string[] parts = matchingEntries[0].Split(',');
+                string startTime = parts[2];
+                string endTime = parts[3];
+                string formattedTimes = $"{startTime}-{endTime}";
+
+                Fridayworktimes.Text = formattedTimes;
+
+
+            }
+            else
+            {
+                // ei löydetty aikaa
+                Fridayworktimes.Text = "no time found";
+            }
+        }
+        private void ReadCsvAndDisplayTimesSat(string username)
+        {
+            // sanoo että user.data on samassa kansiossa kui exe
+            string executablePath = AppDomain.CurrentDomain.BaseDirectory;
+            string csvFilePath = "user_data.csv";
+            csvFilePath = System.IO.Path.Combine(executablePath, csvFilePath);
+            // lukee csv tiedosten
+            string[] csvLines = File.ReadAllLines(csvFilePath);
+
+            // listaa  täsmäävät ajat
+            List<string> matchingEntries = new List<string>();
+
+            matchingEntries = csvLines
+                .Where(line =>
+                {
+                    string[] parts = line.Split(',');
+                    return parts.Length == 4 && parts[0] == username && parts[1] == saturdayDateLong;
+                })
+                .ToList();
+
+            // päivitetään maanantai laatikko täsmäävän ajan aloitus-lopetus ajalla
+            if (matchingEntries.Count > 0)
+            {
+                string[] parts = matchingEntries[0].Split(',');
+                string startTime = parts[2];
+                string endTime = parts[3];
+                string formattedTimes = $"{startTime}-{endTime}";
+
+                Saturdayworktimes.Text = formattedTimes;
+
+
+            }
+            else
+            {
+                // ei löydetty aikaa
+                Saturdayworktimes.Text = "no time found";
+            }
+        }
+        private void ReadCsvAndDisplayTimesSun(string username)
+        {
+            // sanoo että user.data on samassa kansiossa kui exe
+            string executablePath = AppDomain.CurrentDomain.BaseDirectory;
+            string csvFilePath = "user_data.csv";
+            csvFilePath = System.IO.Path.Combine(executablePath, csvFilePath);
+            // lukee csv tiedosten
+            string[] csvLines = File.ReadAllLines(csvFilePath);
+
+            // listaa  täsmäävät ajat
+            List<string> matchingEntries = new List<string>();
+
+            matchingEntries = csvLines
+                .Where(line =>
+                {
+                    string[] parts = line.Split(',');
+                    return parts.Length == 4 && parts[0] == username && parts[1] == sundayDateLong;
+                })
+                .ToList();
+
+            // päivitetään maanantai laatikko täsmäävän ajan aloitus-lopetus ajalla
+            if (matchingEntries.Count > 0)
+            {
+                string[] parts = matchingEntries[0].Split(',');
+                string startTime = parts[2];
+                string endTime = parts[3];
+                string formattedTimes = $"{startTime}-{endTime}";
+
+                Sundayworktimes.Text = formattedTimes;
+
+
+            }
+            else
+            {
+                // ei löydetty aikaa
+                Sundayworktimes.Text = "no time found";
+            }
+        }
+
+        private void UpdateDisplayForCurrentWeek()
+        {
+
+            ReadCsvAndDisplayTimesMon(username);
+            ReadCsvAndDisplayTimesTue(username);
+            ReadCsvAndDisplayTimesWed(username);
+            ReadCsvAndDisplayTimesThu(username);
+            ReadCsvAndDisplayTimesFri(username);
+            ReadCsvAndDisplayTimesSat(username);
+            ReadCsvAndDisplayTimesSun(username);
         }
 
         void OnButtonShow_Click(object sender, RoutedEventArgs e)
