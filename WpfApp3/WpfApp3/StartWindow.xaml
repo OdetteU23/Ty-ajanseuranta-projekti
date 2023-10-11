@@ -11,6 +11,7 @@
 		 ResizeMode="NoResize"
 		 Background="Transparent"
 		 AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
         MouseDown="Window_MouseDown">
     
 
@@ -41,7 +42,8 @@
                         Background="#252525">
                     
                     <Grid HorizontalAlignment="Stretch">
-                        <Label Content="AppName"
+                        <Label
+                               Content="AppName"
                                Foreground="LightGray"
                                FontWeight="SemiBold"/>
 
@@ -52,7 +54,8 @@
                                     Background="Transparent"
                                     Foreground="LightGray"
                                     BorderThickness="0"
-                                    Content="_" 
+                                    Content="-"
+                                    FontSize="16"
                                     Margin="0,0,0,3"
                                     Click="ButtonMinimize_Click"/>
 
@@ -76,7 +79,7 @@
                     
                 </Border>
 
-				<TextBlock Text="App Name"
+				<TextBlock Text="Chrono"
                            Grid.Row="1"
 						   VerticalAlignment="Center"
 						   HorizontalAlignment="Center"

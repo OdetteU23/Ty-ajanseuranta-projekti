@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WpfApp3.MVVM.View"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="950">
+    
     <Grid x:Name="Grid" GotFocus="Grid_RowDefinitions">
         <Grid.RowDefinitions>
             <RowDefinition Height="600"/>
