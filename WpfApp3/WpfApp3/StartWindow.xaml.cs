@@ -6,10 +6,12 @@ using System.Text;
 using System.Windows;
 using System.Windows.Input;
 
+
 namespace WpfApp3
 {
     public partial class StartWindow : Window
     {
+
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
 

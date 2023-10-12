@@ -5,20 +5,143 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3.MVVM.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="950">
-    <Grid x:Name="Grid" GotFocus="Grid_RowDefinitions">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="600"/>
-            <RowDefinition Height="950"/>
-        </Grid.RowDefinitions>
-        <Canvas x:Name="Canvas" Background="DarkOliveGreen" TextInput="Text_Input" Margin="0,-22,0,10">
-            <TextBox x:Name="TextBox1" Canvas.Left="38" TextWrapping="Wrap" Canvas.Top="116" Width="210" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="77"/>
-            <TextBlock x:Name="toteutusBlock" Canvas.Left="609" TextWrapping="Wrap" Text="Tavoitellut tunnit" Canvas.Top="42" FontSize="24" Height="52" Width="190"/>
-            <TextBox x:Name="TextBox2" Canvas.Left="553" TextWrapping="Wrap" Canvas.Top="116" Width="246" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center" TextChanged="TextBox_TextChanged_1" Height="78"/>
-            <Button x:Name="ButtonText" Content="Tarkista" Canvas.Left="294" Canvas.Top="216" FontSize="24" Click="Button_Click" Height="90" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBlock x:Name="TulosBlock" Canvas.Left="38" TextWrapping="Wrap" Background="WhiteSmoke" Canvas.Top="338" FontSize="24" Width="860" HorizontalAlignment="Center" VerticalAlignment="Top" Height="228"/>
-        </Canvas>
-        <TextBlock x:Name="TavoiteBlock" HorizontalAlignment="Left" Margin="32,20,0,0" TextWrapping="Wrap" Text="Toteutuneet tunnit" VerticalAlignment="Top" FontSize="24" Width="200" Height="59"/>
+        Title="Compare" 
+        Background="Transparent"
+        Height="400" Width="600"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="SingleBorderWindow"
+        BorderBrush="DarkOliveGreen">
 
+<!--outer grid and rounded border-->
+    <Grid x:Name="Grid">
+
+        <Border Background="#212121"
+                CornerRadius="10">
+        
+        
+            <Canvas x:Name="Canvas" 
+                Background="Transparent" 
+                TextInput="Text_Input">
+            
+            <!--outer panel and inner grid-->
+            <StackPanel>
+                <Grid Height="400">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.33*"/>
+                        <RowDefinition Height="0.33*"/>
+                        <RowDefinition Height="0.33*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <!--panels with content-->
+                    
+                    
+                    <!--panel with textblocks displaying saved hours or shifts-->
+                    
+                    <StackPanel x:Name="PanelRow0"
+                                Grid.Row="0"
+                                VerticalAlignment="Center"
+                                >
+                        <Grid Width="600">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.2*"/>
+                                    <RowDefinition Height="0.8*"/>
+                                </Grid.RowDefinitions>
+                                                           
+                             
+                            <StackPanel Grid.Row="0"
+                                        Grid.Column="0"
+                                        Orientation="Vertical">
+                                
+                                    <TextBlock x:Name="TavoiteBlock" 
+                                                   Foreground="White"
+                                                   Text="Hours completed" 
+                                                   Width="200" Height="50" 
+                                                   Margin="5" 
+                                                   TextWrapping="Wrap" 
+                                                   FontSize="18" />
+                                    
+                                    <TextBox x:Name="TextBox1"
+                                                 TextWrapping="Wrap" 
+                                                 Width="200" Height="50"
+                                                 Margin="5"
+                                                 FontSize="18"
+                                                 TextChanged="TextBox_TextChanged" RenderTransformOrigin="1,0"/>
+                            </StackPanel>   
+                                
+                            <StackPanel Grid.Column="1"
+                                        Grid.Row ="0">
+                                
+                                    <TextBlock x:Name="toteutusBlock" 
+                                                   Foreground="White"
+                                                   Text="Goal" 
+                                                   Margin="5" 
+                                                   TextWrapping="Wrap"
+                                                   FontSize="18" 
+                                                   Height="50" Width="200"/>
+                                
+                                    
+                                     <TextBox x:Name="TextBox2"  
+                                                TextWrapping="Wrap"  
+                                                Width="200" Height="50"
+                                                Margin="5"
+                                                FontSize="18" 
+                                                TextChanged="TextBox_TextChanged_1"/>
+                            </StackPanel>
+
+
+                        </Grid>
+                    </StackPanel>
+
+                    <!--panel with messagebox / displayable info for user-->
+                    
+                    <StackPanel x:Name="PanelRow1"
+                                Grid.Row="1"
+                                Margin="10"
+                                Width="400"
+                                Orientation="Horizontal">
+
+                            <Image x:Name="ReturnMessageInfoIcon"
+                                   Width="40" Height="40" 
+                                   Margin="20,0,20,0"
+                                   HorizontalAlignment="Left"
+                                    Source="/Images/time-info-white.png"/>
+
+                            <TextBlock x:Name="TulosBlock"
+                                   HorizontalAlignment="Right"
+                                   TextWrapping="Wrap" 
+                                   Background="WhiteSmoke" 
+                                   Canvas.Top="338" 
+                                   FontSize="15" 
+                                   Width="250" Height="30"/>
+                    </StackPanel>
+                    
+                    <!--panel with button to check hours-->
+                    
+                    <StackPanel x:Name="PanelRow2"
+                                Grid.Row="2"
+                                HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Margin="10">
+                        
+
+                        <Button x:Name="ButtonText" 
+                                Content="Check"
+                                FontSize="20" 
+                                Click="Button_Click" 
+                                Height="70" Width="150" 
+                                VerticalAlignment="Center"/>
+                    </StackPanel>
+                    
+                    </Grid>             
+            </StackPanel>
+            
+        </Canvas>
+
+        </Border>
     </Grid>
 </Window>

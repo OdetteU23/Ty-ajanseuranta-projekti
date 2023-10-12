@@ -6,48 +6,53 @@
         xmlns:local="clr-namespace:WpfApp3"
         xmlns:viewModel="clr-namespace:WpfApp3.MVVM.ViewModel"
 		 mc:Ignorable="d"
+         
 		 Height="600" Width="920"
 		 WindowStyle = "None"
 		 ResizeMode="NoResize"
 		 Background="Transparent"
 		 AllowsTransparency="True"
         MouseDown="Window_MouseDown">
-    
+
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
-    
-	<Grid>
-                
+
+    <Grid>
+
         <Border Background="#212121"
             CornerRadius="10">
 
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="200"/>
-					<ColumnDefinition/>
-				</Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
-				<Grid.RowDefinitions>
+                <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
-					<RowDefinition Height="70"/>
-					<RowDefinition/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition/>
 
-				</Grid.RowDefinitions>
+                </Grid.RowDefinitions>
 
                 <Border Grid.ColumnSpan="2"
                         Grid.Row="0"
                         Background="#252525">
-                    
-                    <Grid HorizontalAlignment="Stretch">
+
+                    <Grid HorizontalAlignment="Stretch"
+                          Background="Transparent">
+
                         <Label Content="AppName"
                                Foreground="LightGray"
-                               FontWeight="SemiBold"/>
+                               FontWeight="SemiBold"
+                               HorizontalAlignment="Left"
+                               Margin="30,0,0,0"/>
 
                         <StackPanel HorizontalAlignment="Right"
                                     Orientation="Horizontal">
-                            
+
                             <Button Height="20" Width="20"
                                     Background="Transparent"
                                     Foreground="LightGray"
@@ -62,28 +67,36 @@
                                     BorderThickness="0"
                                     Content="|   |"
                                     Click="ButtonMaximize_Click"/>
-                            
+
                             <Button Height="20" Width="20"
                                     Background="Transparent"
                                     Foreground="LightGray"
                                     BorderThickness="0"
                                     Content="X"
                                     Click="ButtonClose_Click"/>
-                            
+
                         </StackPanel>
+                       <Image Source="/Images/app-icon-white-258.ico"
+                               Width="20"
+                               HorizontalAlignment="Left"
+                               Margin="4"
+                               Visibility="Visible" />
+                               
 
                     </Grid>
-                    
+
                 </Border>
 
-				<TextBlock Text="App Name"
+
+
+                <TextBlock Text="App Name"
                            Grid.Row="1"
 						   VerticalAlignment="Center"
 						   HorizontalAlignment="Center"
 						   Foreground="White"
 						   FontSize="22"/>
 
-				<StackPanel Grid.Row="2">
+                <StackPanel Grid.Row="2">
                     <RadioButton Content="Home"
 								 Height="70"
 								 Margin="0,10,0,10"
@@ -101,6 +114,7 @@
                                  Style="{StaticResource MenuButtonTheme}"
                                  Command="{Binding CalendarViewCommand}"/>
 
+
                     <!--<RadioButton Content="Notes"
 								 Height="70"
 								 Margin="0,10,0,10"
@@ -108,20 +122,29 @@
 								 FontSize="16"
 								 Style="{StaticResource MenuButtonTheme}"/>-->
 
+                    <RadioButton Content="Thanks"
+                                 
+								 Height="70"
+								 Margin="0,250,0,10"
+								 Foreground="White"
+								 FontSize="16"
+                                 Style="{StaticResource MenuButtonTheme}"
+                                 Command="{Binding CalendarViewCommand}"/>
+
                 </StackPanel>
 
-				<ContentControl Grid.Row="2"
+                <ContentControl Grid.Row="2"
 								Grid.Column="1"
 								Margin="10"
 								Content="{Binding CurrentView}"/>
 
-			</Grid>
-		</Border>
-	</Grid>
-	
-	
-	
-	
-	
-	
+            </Grid>
+        </Border>
+    </Grid>
+
+
+
+
+
+
 </Window>
