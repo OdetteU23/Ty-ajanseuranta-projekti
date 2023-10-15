@@ -450,5 +450,13 @@ namespace WpfApp3.MVVM.View
 
  
         }
+        void OnButtonChangeUsername_Click(object sender, RoutedEventArgs e)
+        {
+            // Update the username based on the text in the TextBox
+            username = usernameTextBox.Text;
+
+            // Update the display for the current week with the new username
+            UpdateDisplayForCurrentWeek();
+        }
     }
 }
