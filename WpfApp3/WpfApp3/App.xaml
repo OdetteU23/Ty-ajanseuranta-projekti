@@ -12,7 +12,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/CalendarButtonTheme.xaml"/>
-                <ResourceDictionary Source="Theme/WindowButtonTheme.xaml"/>
+                
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
@@ -27,9 +27,9 @@
                 <view:NotesView/>
             </DataTemplate>
             
-            <DataTemplate DataType="{x:Type viewModel:ThnxViewModel}">
+            <!--<DataTemplate DataType="{x:Type viewModel:ThnxViewModel}">
                 <view:ThnxView/>
-            </DataTemplate>
+            </DataTemplate>-->
             
         </ResourceDictionary>
     </Application.Resources>

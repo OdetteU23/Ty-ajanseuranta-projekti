@@ -19,7 +19,7 @@ namespace WpfApp3.MVVM.ViewModel
         public HomeViewModel HomeVM { get; set; }
         public CalendarViewModel CalendarVM { get; set; }
         public NotesViewModel NotesVM { get; set; }
-        public ThnxViewModel ThnxVM { get; set; }
+        
 
         private object _currentView;
 
@@ -39,7 +39,7 @@ namespace WpfApp3.MVVM.ViewModel
             HomeVM = new HomeViewModel();
             CalendarVM = new CalendarViewModel();
             NotesVM = new NotesViewModel();
-            ThnxVM = new ThnxViewModel(); 
+            //ThnxVM = new ThnxViewModel(); 
             CurrentView = HomeVM;
 
             HomeViewCommand = new RelayCommand(o =>
@@ -57,10 +57,10 @@ namespace WpfApp3.MVVM.ViewModel
                 CurrentView = NotesVM;
             });
 
-            ThnxViewCommand = new RelayCommand(o =>
-            {
-                CurrentView = ThnxVM;
-            });
+            //ThnxViewCommand = new RelayCommand(o =>
+            //{
+            //    CurrentView = ThnxVM;
+            //});
         }
 
     }

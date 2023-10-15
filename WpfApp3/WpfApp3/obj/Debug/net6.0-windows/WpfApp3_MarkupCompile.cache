@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\App.xaml
-12-873348874
+101826316882
 
-19-839267449
+17-837798551
 195-122112670
-AddNoteWindow.xaml;MainWindow.xaml;MVVM\View\CalendarView.xaml;MVVM\View\CalendarView2.xaml;MVVM\View\Compare.xaml;MVVM\View\HomeView.xaml;MVVM\View\NotesView.xaml;MVVM\View\ThnxView.xaml;StartWindow.xaml;Theme\CalendarButtonTheme.xaml;Theme\MenuButtonTheme.xaml;Theme\WindowButtonTheme.xaml;
+AddNoteWindow.xaml;MainWindow.xaml;MVVM\View\CalendarView.xaml;MVVM\View\CalendarView2.xaml;MVVM\View\Compare.xaml;MVVM\View\HomeView.xaml;MVVM\View\NotesView.xaml;StartWindow.xaml;Theme\CalendarButtonTheme.xaml;Theme\MenuButtonTheme.xaml;
 
 False
 

@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Images\app-icon-white-128.png" />
+    <None Remove="Images\app-icon-white-258.png" />
     <None Remove="Images\app-icon-white-32.png" />
     <None Remove="Images\app-icon-white-64.png" />
     <None Remove="Images\calendar-clock-white.png" />

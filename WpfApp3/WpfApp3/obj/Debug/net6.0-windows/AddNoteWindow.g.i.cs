@@ -69,7 +69,7 @@ namespace WpfApp3 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfApp3;V1.0.0.0;component/addnotewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfApp3;component/addnotewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddNoteWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

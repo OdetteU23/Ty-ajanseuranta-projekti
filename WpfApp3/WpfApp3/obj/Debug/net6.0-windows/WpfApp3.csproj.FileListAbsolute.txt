@@ -213,9 +213,6 @@ C:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\De
 C:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.pdb
 C:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.genruntimeconfig.cache
 C:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\ref\WpfApp3.dll
-C:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MVVM\View\ThnxView.g.cs
-C:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\MVVM\View\ThnxView.baml
-C:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\Theme\WindowButtonTheme.baml
 C:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.csproj.AssemblyReference.cache
 C:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Debug\net6.0-windows\WpfApp3.csproj.CopyComplete
