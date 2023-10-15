@@ -9,11 +9,13 @@
          WindowStyle = "None"
          ResizeMode="NoResize"
          Background="Transparent"
-         AllowsTransparency="True">
+         AllowsTransparency="True"
+        
+        >
 
 
     <Grid>
-        
+
         <!--making shit round again because styyyyle-->
         <Border Background="#212121"
         CornerRadius="10">
@@ -30,14 +32,14 @@
                     <RowDefinition Height="0.2*"/>
 
                 </Grid.RowDefinitions>
-            
-            <!--that upper row with buttons to close this thingy-->
+
+                <!--that upper row with buttons to close this thingy-->
                 <Border Grid.ColumnSpan="2"
                         Grid.Row="0"
                         Background="#252525">
 
                     <Grid HorizontalAlignment="Stretch">
-                        <Label Content="AppName"
+                        <Label Content="Add note"
                                 Foreground="LightGray"
                                 FontWeight="SemiBold"/>
 
@@ -45,23 +47,8 @@
                                     Orientation="Horizontal">
 
                             <Button Height="20" Width="20"
-                                    Background="Transparent"
-                                    Foreground="LightGray"
-                                    BorderThickness="0"
-                                    Content="_" 
-                                    Margin="0,0,0,3"
-                                    Click="ButtonMinimize_Click"/>
-
-                            <Button Height="20" Width="20"
-                                    Background="Transparent"
-                                    Foreground="LightGray"
-                                    BorderThickness="0"
-                                    Content="|   |"
-                                    Click="ButtonMaximize_Click"/>
-
-                            <Button Height="20" Width="20"
-                                    Background="Transparent"
-                                    Foreground="LightGray"
+                                    Background="#D54134"
+                                    Foreground="Black"
                                     BorderThickness="0"
                                     Content="X"
                                     Click="ButtonClose_Click"/>
@@ -74,7 +61,7 @@
 
                 <StackPanel Grid.Row="1"
                             >
-                    
+
                     <!--more grid to arrange insides of this.. this.-->
                     <Grid>
 
@@ -87,31 +74,31 @@
 
                         <!--here you are supposed to pick date for your note-->
                         <StackPanel Grid.Row="0">
-                            <DatePicker Height="30" Width="550"
+                            <DatePicker x:Name="datePicker"
+                                        Height="30" Width="550"
                                         Margin="20"
                                         />
                         </StackPanel>
-                        
+
                         <!--panel with text box-->
-                        
+
                         <StackPanel Grid.Row="2">
                             <Border CornerRadius="10,10,10,10" >
                                 <Border.Clip>
                                     <RectangleGeometry RadiusX="10"
                                                         RadiusY="10"
-                                                        Rect="10,30,550,100"/>
+                                                        Rect="25,25,550,190"/>
                                 </Border.Clip>
 
-                                <TextBox 
-                                            Height="120" Width="550"
-                                            Margin="20">
-
-                                    </TextBox> 
+                                <TextBox    x:Name="addNoteTextbox"
+                                            Height="200" Width="550"
+                                            Margin="20"
+                                            />
                             </Border>
                         </StackPanel>
-                        
-                        
-                    
+
+
+
                     </Grid>
                 </StackPanel>
 
@@ -126,7 +113,8 @@
                                     HorizontalAlignment="Center" VerticalAlignment="Center"
                                     Content="Save note"
                                     Click="ButtonSave_Click"
-                                    Margin="10"/>
+                                    
+                                    Margin="10" Background="#9ABB53"/>
                         </StackPanel>
                     </Grid>
                 </StackPanel>

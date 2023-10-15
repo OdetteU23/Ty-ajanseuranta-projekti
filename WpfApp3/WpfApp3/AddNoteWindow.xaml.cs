@@ -1,16 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace WpfApp3
 {
@@ -20,37 +13,58 @@ namespace WpfApp3
     public partial class AddNoteWindow : Window
 
     {
-        private const string FileName = "note_data.json";
-        //private string FilePath => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FileName);
+        private const string FileName = "notes-data.csv";
+        private string FilePath => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FileName);
+
         public AddNoteWindow()
         {
             InitializeComponent();
         }
 
-        private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.MainWindow.WindowState = WindowState.Minimized;
-        }
-
-        private void ButtonMaximize_Click(object sender, RoutedEventArgs e)
-        {
-            if (Application.Current.MainWindow.WindowState != WindowState.Maximized)
-                Application.Current.MainWindow.WindowState = WindowState.Maximized;
-
-            else
-            {
-                Application.Current.MainWindow.WindowState = WindowState.Normal;
-            }
-        }
-
-        private void ButtonClose_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
+        
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
+            string noteText = addNoteTextbox.Text.Trim();
+            // date from the DatePicker
+            DateTime date = datePicker.SelectedDate ?? DateTime.MinValue;
 
+            
+
+
+            
+            
+                string csvLine = $"{date.ToString("dd.MM.yyyy")},{addNoteTextbox.ToString()}";
+
+                try
+                {
+                    // luodaan uusi tiedosto jos vanhaa ei ole
+                    if (!File.Exists(FilePath))
+                    {
+
+                        string header = "Date,Notetext";
+                        File.WriteAllText(FilePath, header + Environment.NewLine);
+                    }
+
+                    // Luodaan uusi rivi tietoa
+                    File.AppendAllText(FilePath, csvLine + Environment.NewLine);
+
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error saving data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            
+        }
+
+        
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
+
+    
 }

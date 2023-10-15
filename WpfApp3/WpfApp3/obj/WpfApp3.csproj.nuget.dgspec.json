@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mikae\\Desktop\\mikaelin gitit\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj": {}
+    "C:\\Users\\Mikael\\Desktop\\projekti\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mikae\\Desktop\\mikaelin gitit\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj": {
+    "C:\\Users\\Mikael\\Desktop\\projekti\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mikae\\Desktop\\mikaelin gitit\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
+        "projectUniqueName": "C:\\Users\\Mikael\\Desktop\\projekti\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
         "projectName": "WpfApp3",
-        "projectPath": "C:\\Users\\mikae\\Desktop\\mikaelin gitit\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
-        "packagesPath": "C:\\Users\\mikae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mikae\\Desktop\\mikaelin gitit\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\obj\\",
+        "projectPath": "C:\\Users\\Mikael\\Desktop\\projekti\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
+        "packagesPath": "C:\\Users\\Mikael\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mikael\\Desktop\\projekti\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mikae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mikael\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,6 +44,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

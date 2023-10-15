@@ -9,17 +9,43 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Images\app-icon-white-258.ico" />
+    <None Remove="Images\app-icon-white-128.png" />
+    <None Remove="Images\app-icon-white-32.png" />
+    <None Remove="Images\app-icon-white-64.png" />
+    <None Remove="Images\calendar-clock-white.png" />
+    <None Remove="Images\comment-bubble-white.png" />
+    <None Remove="Images\time-info-white.png" />
+    <None Remove="TextFiles\ThanksAndCredits.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\app-icon-white-128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </Resource>
+    <Resource Include="Images\app-icon-white-258.png" />
+    <Resource Include="Images\app-icon-white-32.png" />
+    <Resource Include="Images\comment-bubble-white.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="MVVM\Model\" />
+    <Folder Include="TextFiles\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Images\app-icon-white-128.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\app-icon-white-64.png" />
+    <Resource Include="Images\calendar-clock-white.png" />
+    <Resource Include="Images\time-info-white.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TextFiles\ThanksAndCredits.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

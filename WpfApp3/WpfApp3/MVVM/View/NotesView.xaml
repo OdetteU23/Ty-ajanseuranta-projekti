@@ -5,64 +5,152 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp3.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="510" d:DesignWidth="700">
-    
-<StackPanel Orientation="Horizontal">
-     <StackPanel>
-         <Border Width="700"
-             Height="510"
-             Margin="0,0,0,0"
+             d:DesignHeight="450" d:DesignWidth="700">
+
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Border Width="700"
+             Height="450"
              Background="White"
-             VerticalAlignment="Top"
-             HorizontalAlignment="Center">
-                            
-             <Border.Clip>
-                 <RectangleGeometry RadiusX="10"
+             OpacityMask="Black" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
                                 RadiusY="10"
-                                Rect="5,5,690,500"/>
-             </Border.Clip>
+                                Rect="5,5,690,440"/>
+                </Border.Clip>
 
                 <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="0.15*"/>
-                    </Grid.ColumnDefinitions>
+
 
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
                         <RowDefinition Height="0.2*"/>
-                        
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="0.2*"/>
+
                     </Grid.RowDefinitions>
 
-                    <StackPanel Grid.Row="1"
-                                Grid.Column="1"
-                                VerticalAlignment="Center"
-                                >
+                    
+
+
+                    <!--using datagridview to display notes-->
+
+                    <StackPanel Grid.Row="0"
+                                Background="#556B2F"
+                                Margin="10,10,10,10">
                         
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0*" />
+                                    <RowDefinition Height="0*"/>
+                                </Grid.RowDefinitions>
+                            </Grid>
+
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Date" 
+                                       FontSize="14"
+                                       Grid.Column="0" Grid.Row="0"
+                                       Width="50" Height="30"
+                                       HorizontalAlignment="Left"/>
+
+                            <DatePicker x:Name="datePicker"
+                                        Height="30" Width="550"
+                                        Margin="20"
+                                        />
+                        </StackPanel>
+
                             
-                        <Button x:Name="ButtonAddNote"
-                                Content="+"
-                                FontSize="25"
-                                Background="LawnGreen"
-                                Height="40"
-                                Width="40" 
-                                Click="ButtonAddNote_Click"/>
-                              
+                    </StackPanel>
                         
+
+                    <StackPanel Grid.Row="1"
+                                Background="Transparent">
+                        <StackPanel Orientation="Horizontal">
+                                <Label  Content="Text"
+                                        FontSize="14"
+                                        Grid.Column="0" Grid.Row="1"
+                                        Width="50" Height="200"
+                                        Margin="20"
+                                        HorizontalAlignment="Left"/>
+
+                                <TextBlock  x:Name="noteDisplay"
+                                            Height="200" Width="600" 
+                                             Grid.Column="1" Grid.Row="1"
+                                             HorizontalAlignment="Right"
+                                             />
+                        </StackPanel>
                         
                         
                     </StackPanel>
+
+                    <StackPanel Grid.Row="2" 
+                                Orientation="Horizontal"
+                                FlowDirection="LeftToRight">
+
+                        <Grid Width="700">
+                            <Grid.ColumnDefinitions>
+                                
+                                <ColumnDefinition Width="0.25*"/>
+                                <ColumnDefinition Width="0.25*"/>
+                                <ColumnDefinition Width="0.25*"/>
+                                
+                            </Grid.ColumnDefinitions>
+                        
+                        
+                            
+
+                            <Button x:Name="ButtonLoadNote"
+                                    Content="Load"
+                                    Width="100" Height="30"
+                                    Margin="20"
+                                    Click="ButtonLoadNote_Click"
+                                    Grid.Column="0"/>
+
+                            <Button x:Name="ButtonEditNote"
+                                    Content="Edit"
+                                    Background="#FFD633"
+                                    Width="100" Height="30"
+                                    Margin="20"
+                                    Grid.Column="1" Click="ButtonEditNote_Click"/>
+
+                            <Button x:Name="ButtonDeleteNote"
+                                    Content="Delete"
+                                    Background="#D54134"
+                                    Width="100" Height="30"
+                                    Margin="20"
+                                    Grid.Column="3"/>
+                        </Grid>
+
+                    </StackPanel>
                     
+
+                            <!--<DataGrid.Columns>
+                                    
+                                    <DataGridTextColumn Width="0.3*" Header="Date">
+                                        
+                                    </DataGridTextColumn>
+
+                                    <DataGridTextColumn Width="0.7*" Header="Note text">
+                                        
+                                    </DataGridTextColumn>
+
+                                    
+                                </DataGrid.Columns>-->
+
+                        
+
+                    
+
                 </Grid>
-                
-                
-                
+
+
+
 
             </Border>
 
-           
+
         </StackPanel>
-     
-</StackPanel>
+
+    </StackPanel>
 
 </UserControl>

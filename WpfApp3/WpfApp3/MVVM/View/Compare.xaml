@@ -6,18 +6,18 @@
         xmlns:local="clr-namespace:WpfApp3.MVVM.View"
         mc:Ignorable="d"
         Title="Compare" 
+        Icon="/Images/app-icon-white-128.png"
         Background="Transparent"
-        Height="400" Width="600"
-        ResizeMode="NoResize"
+        Height="500" Width="600"
+        ResizeMode="CanMinimize"
         WindowStartupLocation="CenterOwner"
-        WindowStyle="SingleBorderWindow"
-        BorderBrush="DarkOliveGreen">
+        >
 
 <!--outer grid and rounded border-->
     <Grid x:Name="Grid">
 
         <Border Background="#212121"
-                CornerRadius="10">
+                CornerRadius="0,0,10,10">
         
         
             <Canvas x:Name="Canvas" 
@@ -58,6 +58,8 @@
                                         Grid.Column="0"
                                         Orientation="Vertical">
                                 
+                                    
+                                
                                     <TextBlock x:Name="TavoiteBlock" 
                                                    Foreground="White"
                                                    Text="Hours completed" 
@@ -65,13 +67,22 @@
                                                    Margin="5" 
                                                    TextWrapping="Wrap" 
                                                    FontSize="18" />
-                                    
-                                    <TextBox x:Name="TextBox1"
+                                
+                                    <Border Margin="5">
+                                        <Border.Clip>
+                                            <RectangleGeometry RadiusX="10"
+                                                                RadiusY="10"
+                                                                Rect="45,5,200,50"/>
+                                        </Border.Clip>
+                                        
+                                        <TextBox x:Name="TextBox1"
                                                  TextWrapping="Wrap" 
                                                  Width="200" Height="50"
                                                  Margin="5"
                                                  FontSize="18"
                                                  TextChanged="TextBox_TextChanged" RenderTransformOrigin="1,0"/>
+                                    </Border>
+                                    
                             </StackPanel>   
                                 
                             <StackPanel Grid.Column="1"
@@ -84,15 +95,22 @@
                                                    TextWrapping="Wrap"
                                                    FontSize="18" 
                                                    Height="50" Width="200"/>
-                                
-                                    
-                                     <TextBox x:Name="TextBox2"  
+
+                                    <Border Margin="5">
+                                        <Border.Clip>
+                                            <RectangleGeometry RadiusX="10"
+                                                                   RadiusY="10"
+                                                                   Rect="45,5,200,50"/>
+                                        </Border.Clip>
+
+                                        <TextBox x:Name="TextBox2"  
                                                 TextWrapping="Wrap"  
                                                 Width="200" Height="50"
                                                 Margin="5"
                                                 FontSize="18" 
                                                 TextChanged="TextBox_TextChanged_1"/>
-                            </StackPanel>
+                                    </Border>
+                                </StackPanel>
 
 
                         </Grid>
@@ -112,14 +130,21 @@
                                    HorizontalAlignment="Left"
                                     Source="/Images/time-info-white.png"/>
 
-                            <TextBlock x:Name="TulosBlock"
+                            <Border Margin="5">
+                                <Border.Clip>
+                                    <RectangleGeometry RadiusX="5"
+                                                        RadiusY="5"
+                                                        Rect="25,35,200,30"/>
+                                </Border.Clip>
+
+                                <TextBlock x:Name="TulosBlock"
                                    HorizontalAlignment="Right"
                                    TextWrapping="Wrap" 
                                    Background="WhiteSmoke" 
-                                   Canvas.Top="338" 
                                    FontSize="15" 
-                                   Width="250" Height="30"/>
-                    </StackPanel>
+                                   Width="250" Height="35"/>
+                            </Border>
+                        </StackPanel>
                     
                     <!--panel with button to check hours-->
                     
@@ -128,7 +153,8 @@
                                 HorizontalAlignment="Center" VerticalAlignment="Center"
                                 Margin="10">
                         
-
+                        
+                        
                         <Button x:Name="ButtonText" 
                                 Content="Check"
                                 FontSize="20" 

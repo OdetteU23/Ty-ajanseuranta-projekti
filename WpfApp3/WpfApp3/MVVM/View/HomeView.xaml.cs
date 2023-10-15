@@ -20,6 +20,7 @@ namespace WpfApp3.MVVM.View
     /// </summary>
     public partial class HomeView : UserControl
     {
+        
         public HomeView()
         {
             InitializeComponent();

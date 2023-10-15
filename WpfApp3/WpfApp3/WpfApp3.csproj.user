@@ -22,6 +22,9 @@
     <Compile Update="MVVM\View\NotesView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\ThnxView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AddNoteWindow.xaml">
@@ -42,10 +45,16 @@
     <Page Update="MVVM\View\NotesView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MVVM\View\ThnxView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Theme\CalendarButtonTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Theme\MenuButtonTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\WindowButtonTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -48,17 +48,16 @@
                                FontSize="16"
                                Margin="20,50,10,0"
                                VerticalAlignment="Bottom"/>
-
+                        <Image Width="70" Height="70"
+                                Margin="40"
+                                Source="/Images/calendar-clock-white.png"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"/>   
                     </StackPanel>
-                    <Grid HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top">
+                    
 
-                        <Image Width="70"
-                            Height="70"
-                            Source="/Images/calendar-clock-white.png"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top"
-                       />
-                    </Grid>
+                        
+                    
                 </Grid>
 
             </Border>
@@ -91,22 +90,20 @@
                                Foreground="White"
                                FontSize="28"
                                Margin="20,20,20,0"/>
-                        <TextBlock Text="Leave notes and &#x0a;communicate"
+                        <TextBlock Text="Leave notes and &#x0a;make lists"
                                Foreground="White"
                                FontSize="16"
                                Margin="20,50,10,0"
                                VerticalAlignment="Bottom"/>
-
-                    </StackPanel>
-                    <Grid HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top">
-
                         <Image Width="70"
                             Height="70"
+                               Margin="40"
                             Source="/Images/comment-bubble-white.png"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top"
-                       />
-                    </Grid>
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"/>
+
+                    </StackPanel>
+                    
                 </Grid>
 
             </Border>

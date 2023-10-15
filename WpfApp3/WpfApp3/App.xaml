@@ -4,21 +4,31 @@
              xmlns:local="clr-namespace:WpfApp3"
              xmlns:viewModel="clr-namespace:WpfApp3.MVVM.ViewModel"
              xmlns:view="clr-namespace:WpfApp3.MVVM.View"
-             StartupUri="StartWindow.xaml">
+             StartupUri="StartWindow.xaml"
+             >
     <Application.Resources>
         <ResourceDictionary>
             
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/CalendarButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/WindowButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
-                        <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>
             </DataTemplate>
             
             <DataTemplate DataType="{x:Type viewModel:CalendarViewModel}">
                 <view:CalendarView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:NotesViewModel}">
+                <view:NotesView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:ThnxViewModel}">
+                <view:ThnxView/>
             </DataTemplate>
             
         </ResourceDictionary>
