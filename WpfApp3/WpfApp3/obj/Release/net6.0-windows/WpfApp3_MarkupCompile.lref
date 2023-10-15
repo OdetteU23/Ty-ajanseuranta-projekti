@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-﻿C:\Users\mikae\Desktop\mikaelin gitit\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Release\net6.0-windows\GeneratedInternalTypeHelper.g.cs
-FC:\Users\mikae\Desktop\mikaelin gitit\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\App.xaml;;
-FC:\Users\mikae\Desktop\mikaelin gitit\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\AddNoteWindow.xaml;;
-FC:\Users\mikae\Desktop\mikaelin gitit\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\MVVM\View\CalendarView.xaml;;
-FC:\Users\mikae\Desktop\mikaelin gitit\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\MVVM\View\CalendarView2.xaml;;
-FC:\Users\mikae\Desktop\mikaelin gitit\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\MVVM\View\Compare.xaml;;
-FC:\Users\mikae\Desktop\mikaelin gitit\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\MVVM\View\HomeView.xaml;;
-FC:\Users\mikae\Desktop\mikaelin gitit\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\MVVM\View\NotesView.xaml;;
-FC:\Users\mikae\Desktop\mikaelin gitit\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\StartWindow.xaml;;
-=======
-﻿C:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\ohjelmistokehitys_projekti\WpfApp3\WpfApp3\obj\Release\net6.0-windows\GeneratedInternalTypeHelper.g.cs
-FC:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\ohjelmistokehitys_projekti\WpfApp3\WpfApp3\App.xaml;;
-FC:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\ohjelmistokehitys_projekti\WpfApp3\WpfApp3\MVVM\View\CalendarView.xaml;;
-FC:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\ohjelmistokehitys_projekti\WpfApp3\WpfApp3\MVVM\View\CalendarView2.xaml;;
-FC:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\ohjelmistokehitys_projekti\WpfApp3\WpfApp3\MVVM\View\Compare.xaml;;
-FC:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\ohjelmistokehitys_projekti\WpfApp3\WpfApp3\MVVM\View\HomeView.xaml;;
-FC:\Users\lehto\OneDrive - Hämeen ammattikorkeakoulu\ohjelmistokehitys_projekti\WpfApp3\WpfApp3\StartWindow.xaml;;
->>>>>>> cf16a60272e6415ccd4a24cac300ebe63f0cb7b0
+﻿C:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\obj\Release\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+FC:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\App.xaml;;
+FC:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\AddNoteWindow.xaml;;
+FC:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\MVVM\View\CalendarView.xaml;;
+FC:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\MVVM\View\CalendarView2.xaml;;
+FC:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\MVVM\View\Compare.xaml;;
+FC:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\MVVM\View\HomeView.xaml;;
+FC:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\MVVM\View\NotesView.xaml;;
+FC:\Users\Mikael\Desktop\projekti\Ty-ajanseuranta-projekti\WpfApp3\WpfApp3\StartWindow.xaml;;
 

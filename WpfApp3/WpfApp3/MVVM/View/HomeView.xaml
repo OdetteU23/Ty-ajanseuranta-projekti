@@ -6,10 +6,8 @@
              xmlns:local="clr-namespace:WpfApp3.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Border CornerRadius="20"
-            BorderThickness="4"
-            BorderBrush="white">
-        <StackPanel Orientation="Horizontal">
+    
+    <StackPanel Orientation="Horizontal">
         <TextBlock Text="Get started"
                    Height="50"
                    Foreground="White"
@@ -20,22 +18,14 @@
 
         <StackPanel Orientation="Horizontal"
                     VerticalAlignment="Center">
-            <Border CornerRadius="20"
-                    BorderThickness="4"
-                    BorderBrush="#F2F2F2"
-                Width="200"
+            <Border Width="200"
                 Height="300"
                 Margin="30">
 
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="2,1">
-<<<<<<< HEAD
                         <GradientStop Color="DarkOliveGreen" Offset="0.0"/>
                         <GradientStop Color= "#859424" Offset="1"/>
-=======
-                            <GradientStop Color="#0E8BF1" Offset="0.0"/>
-                        <GradientStop Color= "#8FD2DB" Offset="1"/>
->>>>>>> cf16a60272e6415ccd4a24cac300ebe63f0cb7b0
                     </LinearGradientBrush>
 
                 </Border.Background>
@@ -75,22 +65,14 @@
 
         <StackPanel Orientation="Horizontal"
                     VerticalAlignment="Center">
-            <Border CornerRadius="20"
-                    BorderThickness="4"
-                    BorderBrush="#F2F2F2" 
-                    Width="200"
+            <Border Width="200"
                 Height="300"
                 Margin="30">
 
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="2,1">
-<<<<<<< HEAD
                         <GradientStop Color="DarkOliveGreen" Offset="0.0"/>
                         <GradientStop Color= "#859424" Offset="1"/>
-=======
-                            <GradientStop Color="#0E8BF1" Offset="0.0"/>
-                            <GradientStop Color= "#8FD2DB" Offset="1"/>
->>>>>>> cf16a60272e6415ccd4a24cac300ebe63f0cb7b0
                     </LinearGradientBrush>
 
                 </Border.Background>
@@ -128,5 +110,4 @@
         </StackPanel>
 
     </StackPanel>
-    </Border>
 </UserControl>

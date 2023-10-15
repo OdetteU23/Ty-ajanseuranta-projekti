@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.IO;
 
 namespace WpfApp3.MVVM.View
 {
@@ -42,139 +41,28 @@ namespace WpfApp3.MVVM.View
 
         }
 
-       
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(TextBox1.Text, out double totalHours) && double.TryParse(TextBox2.Text, out double targetHours))
+
+            {
+                double Tunti = totalHours - targetHours;
+                string TulosText = $"  Tavoitellut tunnit: {targetHours:F2} Tunnit\n";
+                TulosText += $"  Toteutuneet tunnit: {totalHours:F2} Tunnit\n";
+                TulosText += $" Ylitehty/Alitehty: {Tunti:F2} Tunnit\n";
+                TulosText += $" Mikäli luku on negatiivinen, se tarkoittaa, että tavoitetunteja ei ole saavutettu.\n";
+                TulosText += $" Ja jos luku on positiivinen, se tarkoittaa, että tavoitetunnit on ylitetty.";
+                TulosBlock.Text = TulosText;
+            }
+            else
+            {
+                TulosBlock.Text = "Varaa syöte. Kirjoita numerot oikein";
+            }
+        }
 
         private void Grid_RowDefinitions(object sender, RoutedEventArgs e)
         {
 
-        }
-        private DateTime GetMondayOfCurrentWeek(DateTime currentDate)
-        {
-            int daysUntilMonday = ((int)currentDate.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
-            DateTime mondayOfWeek = currentDate.AddDays(-daysUntilMonday);
-            return mondayOfWeek;
-        }
-        private double GetActualHoursForWeekFromCSV(string username)
-        {
-            //csv tiedoston sijainti sama kuin exe
-            string executablePath = AppDomain.CurrentDomain.BaseDirectory;
-            string csvFilePath = "user_data.csv";
-            csvFilePath = System.IO.Path.Combine(executablePath, csvFilePath);
-
-            
-            DateTime currentWeekStart = GetMondayOfCurrentWeek(DateTime.Now);
-            DateTime currentWeekEnd = currentWeekStart.AddDays(6);
-
-            
-            string[] csvLines = File.ReadAllLines(csvFilePath);
-            double actualHours = 0;
-
-            foreach (var line in csvLines)
-            {
-                string[] parts = line.Split(',');
-
-                if (parts.Length == 4 && parts[0] == username)
-                {
-                    if (DateTime.TryParseExact(parts[1], "dd.MM.yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
-                    {
-                        if (entryDate >= currentWeekStart && entryDate <= currentWeekEnd)
-                        {
-                            if (TimeSpan.TryParse(parts[3], out TimeSpan endTime) && TimeSpan.TryParse(parts[2], out TimeSpan startTime))
-                            {
-                                actualHours += (endTime - startTime).TotalHours;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error parsing date from CSV.");
-                        return -1;
-                    }
-                }
-            }
-
-            return actualHours;
-        }
-        private double GetActualHoursForLastWeekFromCSV(string username)
-        {
-            //csv tiedoston sijainti sama kuin exe
-            string executablePath = AppDomain.CurrentDomain.BaseDirectory;
-            string csvFilePath = "user_data.csv";
-            csvFilePath = System.IO.Path.Combine(executablePath, csvFilePath);
-
-            
-            DateTime lastWeekStart = GetMondayOfCurrentWeek(DateTime.Now).AddDays(-7);
-            DateTime lastWeekEnd = lastWeekStart.AddDays(6);
-
-            
-            string[] csvLines = File.ReadAllLines(csvFilePath);
-            double actualHours = 0;
-
-            foreach (var line in csvLines)
-            {
-                string[] parts = line.Split(',');
-
-                if (parts.Length == 4 && parts[0] == username)
-                {
-                    if (DateTime.TryParseExact(parts[1], "dd.MM.yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
-                    {
-                        if (entryDate >= lastWeekStart && entryDate <= lastWeekEnd)
-                        {
-                            if (TimeSpan.TryParse(parts[3], out TimeSpan endTime) && TimeSpan.TryParse(parts[2], out TimeSpan startTime))
-                            {
-                                actualHours += (endTime - startTime).TotalHours;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error parsing date from CSV.");
-                        return -1; // Return -1 to indicate an error
-                    }
-                }
-            }
-
-            return actualHours;
-        }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            string username = TextBox1.Text;
-
-            if (double.TryParse(TextBox2.Text, out double targetHours))
-            {
-                
-                double actualHours = GetActualHoursForWeekFromCSV(username);
-                double differenceCurrentWeek = actualHours - targetHours;
-                double differenceLastWeek = GetActualHoursForLastWeekFromCSV(username) - targetHours;
-
-                string resultText = $"Tällä viikolla:\n";
-                resultText += $"  Tavoitellut tunnit: {targetHours:F2} Tunnit\n";
-                resultText += $"  Toteutuneet tunnit: {actualHours:F2} Tunnit\n";
-
-                if (differenceCurrentWeek < 0)
-                    resultText += $"  Alitit {Math.Abs(differenceCurrentWeek):F2} tuntia tavoitteesta.\n";
-                else if (differenceCurrentWeek > 0)
-                    resultText += $"  Ylitys {differenceCurrentWeek:F2} tuntia tavoitteesta.\n";
-                else
-                    resultText += $"  Saavutit tavoitetunnit täsmälleen.\n";
-
-                resultText += $"\nViime viikolla:\n";
-                resultText += $"  Tavoitellut tunnit: {targetHours:F2} Tunnit\n";
-                resultText += $"  Toteutuneet tunnit: {GetActualHoursForLastWeekFromCSV(username):F2} Tunnit\n";
-
-                if (differenceLastWeek < 0)
-                    resultText += $"  Alitit {Math.Abs(differenceLastWeek):F2} tuntia tavoitteesta.\n";
-                else if (differenceLastWeek > 0)
-                    resultText += $"  Ylitys {differenceLastWeek:F2} tuntia tavoitteesta.\n";
-                else
-                    resultText += $"  Saavutit tavoitetunnit täsmälleen.\n";
-
-                TulosBlock.Text = resultText;
-            }
-            else
-            {
-                TulosBlock.Text = "Virheellinen tavoiteltu tuntimäärä. Kirjoita numerot oikein.";
-            }
         }
     }
 }

@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
-using WpfApp3.MVVM.View;
 
 namespace WpfApp3
 {
@@ -12,15 +11,13 @@ namespace WpfApp3
     {
         private const string FileName = "user_data.csv";
         private string FilePath => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FileName);
-        private CalendarView calendarView;
 
-        public MainWindow(CalendarView calendarView)
+
+        public MainWindow()
         {
             InitializeComponent();
-            InitializeComponent();
-            this.calendarView = calendarView;
-
-
+        
+          
         }
 
         //tallentaa tiedet csv tiedostoon
@@ -59,9 +56,7 @@ namespace WpfApp3
                 // Luodaan uusi rivi tietoa
                 File.AppendAllText(FilePath, csvLine + Environment.NewLine);
 
-                calendarView.UpdateDisplayForCurrentWeek();
                 MessageBox.Show($"Data saved to: {FilePath}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                
             }
             catch (Exception ex)
             {
