@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\WpfApp3",
-    "\\WpfApp3\\WpfApp3",
-    "\\WpfApp3\\WpfApp3\\MVVM",
-    "\\WpfApp3\\WpfApp3\\MVVM\\View"
+    ""
   ],
-  "SelectedNode": "\\WpfApp3\\WpfApp3\\MVVM\\View\\HomeView.xaml",
+  "SelectedNode": "\\WpfApp3.sln",
   "PreviewInSolutionExplorer": false
 }

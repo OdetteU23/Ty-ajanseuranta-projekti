@@ -30,7 +30,11 @@
         <Style.Triggers>
             <Trigger Property="IsMouseDirectlyOver" 
                      Value="True">
+<<<<<<< HEAD
                 <Setter Property="Background" Value="#556B2F"/>
+=======
+                <Setter Property="Background" Value="#0E8BF1"/>
+>>>>>>> cf16a60272e6415ccd4a24cac300ebe63f0cb7b0
                 
             </Trigger>
 

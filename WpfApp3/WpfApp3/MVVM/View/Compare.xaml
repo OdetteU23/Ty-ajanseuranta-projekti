@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3.MVVM.View"
         mc:Ignorable="d"
+<<<<<<< HEAD
         Title="Compare" 
         Icon="/Images/app-icon-white-128.png"
         Background="Transparent"
@@ -12,6 +13,23 @@
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterOwner"
         >
+=======
+        Title="MainWindow" Height="600" Width="950">
+
+    <Grid x:Name="Grid" GotFocus="Grid_RowDefinitions">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="600"/>
+            <RowDefinition Height="950"/>
+        </Grid.RowDefinitions>
+        <Canvas x:Name="Canvas" Background="DarkOliveGreen" TextInput="Text_Input" Margin="0,-22,0,10">
+            <TextBox x:Name="TextBox1" Canvas.Left="38" TextWrapping="Wrap" Canvas.Top="116" Width="210" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="77"/>
+            <TextBlock x:Name="toteutusBlock" Canvas.Left="553" TextWrapping="Wrap" Text="Tavoitellut tunnit" Canvas.Top="82" FontSize="24" Height="34" Width="190" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="TextBox2" Canvas.Left="553" TextWrapping="Wrap" Canvas.Top="116" Width="246" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center" TextChanged="TextBox_TextChanged_1" Height="78"/>
+            <Button x:Name="ButtonText" Content="Tarkista" Canvas.Left="294" Canvas.Top="216" FontSize="24" Click="Button_Click" Height="90" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBlock x:Name="TulosBlock" Canvas.Left="38" TextWrapping="Wrap" Background="WhiteSmoke" Canvas.Top="338" FontSize="24" Width="860" HorizontalAlignment="Center" VerticalAlignment="Top" Height="228"/>
+        </Canvas>
+        <TextBlock x:Name="TavoiteBlock" HorizontalAlignment="Left" Margin="35,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="200" Height="59"><Run Language="fi-fi" Text="käyttäjä"/></TextBlock>
+>>>>>>> cf16a60272e6415ccd4a24cac300ebe63f0cb7b0
 
 <!--outer grid and rounded border-->
     <Grid x:Name="Grid">

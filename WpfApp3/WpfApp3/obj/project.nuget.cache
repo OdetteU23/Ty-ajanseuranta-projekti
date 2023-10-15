@@ -1,10 +1,17 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "h0m8Y4Mvg5ZK4/F+mWH0FcAt+UQhh4coCpEqM01PB5coBrudBYYQJr5WFh1HUd/uadiEW6PE7nirbeeVLl30Sg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mikael\\Desktop\\projekti\\Ty-ajanseuranta-projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mikael\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "HAJgMVKukox3Yktu98HyxGE59hGDiPeSCFWYDRgWWG938iwwTEncMbDs+gcjfUWoboxAoorx0jEK/xeqDHcsjg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lehto\\OneDrive - Hämeen ammattikorkeakoulu\\ohjelmistokehitys_projekti\\WpfApp3\\WpfApp3\\WpfApp3.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> cf16a60272e6415ccd4a24cac300ebe63f0cb7b0
   "logs": []
 }
