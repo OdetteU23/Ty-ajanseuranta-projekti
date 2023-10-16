@@ -13,160 +13,135 @@
         WindowStartupLocation="CenterOwner"
         >
 
-<!--outer grid and rounded border-->
+    <!--outer grid and rounded border-->
     <Grid x:Name="Grid">
 
         <Border Background="#212121"
                 CornerRadius="0,0,10,10">
-        
-        
+
+
             <Canvas x:Name="Canvas" 
                 Background="Transparent" 
                 TextInput="Text_Input">
-            
-            <!--outer panel and inner grid-->
-            <StackPanel>
-                <Grid Height="400">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.33*"/>
-                        <RowDefinition Height="0.33*"/>
-                        <RowDefinition Height="0.33*"/>
-                    </Grid.RowDefinitions>
-                    
-                    <!--panels with content-->
-                    
-                    
-                    <!--panel with textblocks displaying saved hours or shifts-->
-                    
-                    <StackPanel x:Name="PanelRow0"
-                                Grid.Row="0"
-                                VerticalAlignment="Center"
+
+                <!--outer panel and inner grid-->
+                <StackPanel>
+                    <Grid Height="400">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="41*"/>
+                            <RowDefinition Height="135*"/>
+                            <RowDefinition Height="24*"/>
+                            <RowDefinition Height="0*"/>
+                        </Grid.RowDefinitions>
+
+                        <!--panels with content-->
+
+
+                        <!--panel with textblocks displaying saved hours or shifts-->
+
+                        <StackPanel x:Name="PanelRow0"
+                                VerticalAlignment="Center" Height="84"
                                 >
-                        <Grid Width="600">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.5*"/>
-                                <ColumnDefinition Width="0.5*"/>
-                            </Grid.ColumnDefinitions>
+                            <Grid Width="600">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.5*"/>
+                                    <ColumnDefinition Width="0.5*"/>
+                                </Grid.ColumnDefinitions>
 
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="0.2*"/>
                                     <RowDefinition Height="0.8*"/>
                                 </Grid.RowDefinitions>
-                                                           
-                             
-                            <StackPanel Grid.Row="0"
+
+
+                                <StackPanel Grid.Row="0"
                                         Grid.Column="0"
                                         Orientation="Vertical">
-                                
-                                    
-                                
+
                                     <TextBlock x:Name="TavoiteBlock" 
                                                    Foreground="White"
-                                                   Text="Hours completed" 
-                                                   Width="200" Height="50" 
-                                                   Margin="5" 
+                                                   Text="Username" 
+                                                   Width="200" Height="24" 
                                                    TextWrapping="Wrap" 
                                                    FontSize="18" />
-                                
+
                                     <Border Margin="5">
-                                        <Border.Clip>
-                                            <RectangleGeometry RadiusX="10"
-                                                                RadiusY="10"
-                                                                Rect="45,5,200,50"/>
-                                        </Border.Clip>
-                                        
+
+
                                         <TextBox x:Name="TextBox1"
                                                  TextWrapping="Wrap" 
-                                                 Width="200" Height="50"
-                                                 Margin="5"
+                                                 Width="200" Height="25"
                                                  FontSize="18"
                                                  TextChanged="TextBox_TextChanged" RenderTransformOrigin="1,0"/>
                                     </Border>
-                                    
-                            </StackPanel>   
-                                
-                            <StackPanel Grid.Column="1"
+
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1"
                                         Grid.Row ="0">
-                                
+
                                     <TextBlock x:Name="toteutusBlock" 
                                                    Foreground="White"
-                                                   Text="Goal" 
-                                                   Margin="5" 
+                                                   Text="weekly goal hours" 
                                                    TextWrapping="Wrap"
                                                    FontSize="18" 
-                                                   Height="50" Width="200"/>
+                                                   Height="24" Width="200"/>
 
                                     <Border Margin="5">
-                                        <Border.Clip>
-                                            <RectangleGeometry RadiusX="10"
-                                                                   RadiusY="10"
-                                                                   Rect="45,5,200,50"/>
-                                        </Border.Clip>
+
 
                                         <TextBox x:Name="TextBox2"  
                                                 TextWrapping="Wrap"  
-                                                Width="200" Height="50"
-                                                Margin="5"
+                                                Width="200" Height="25"
                                                 FontSize="18" 
                                                 TextChanged="TextBox_TextChanged_1"/>
                                     </Border>
                                 </StackPanel>
 
 
-                        </Grid>
-                    </StackPanel>
+                            </Grid>
+                        </StackPanel>
 
-                    <!--panel with messagebox / displayable info for user-->
-                    
-                    <StackPanel x:Name="PanelRow1"
+                        <!--panel with messagebox / displayable info for user-->
+
+                        <StackPanel x:Name="PanelRow1"
                                 Grid.Row="1"
-                                Margin="10"
-                                Width="400"
+                                Margin="38,10,100,10"
                                 Orientation="Horizontal">
 
                             <Image x:Name="ReturnMessageInfoIcon"
-                                   Width="40" Height="40" 
-                                   Margin="20,0,20,0"
-                                   HorizontalAlignment="Left"
+                                   Width="40" Height="40"
                                     Source="/Images/time-info-white.png"/>
 
                             <Border Margin="5">
-                                <Border.Clip>
-                                    <RectangleGeometry RadiusX="5"
-                                                        RadiusY="5"
-                                                        Rect="25,35,200,30"/>
-                                </Border.Clip>
+
 
                                 <TextBlock x:Name="TulosBlock"
-                                   HorizontalAlignment="Right"
+                                   HorizontalAlignment="Center"
                                    TextWrapping="Wrap" 
                                    Background="WhiteSmoke" 
-                                   FontSize="15" 
-                                   Width="250" Height="35"/>
+                                   FontSize="13" 
+                                   Width="420" Height="198"/>
                             </Border>
                         </StackPanel>
-                    
-                    <!--panel with button to check hours-->
-                    
-                    <StackPanel x:Name="PanelRow2"
+
+                        <!--panel with button to check hours-->
+
+                        <StackPanel x:Name="PanelRow2"
                                 Grid.Row="2"
-                                HorizontalAlignment="Center" VerticalAlignment="Center"
-                                Margin="10">
-                        
-                        
-                        
-                        <Button x:Name="ButtonText" 
+                                HorizontalAlignment="Center" VerticalAlignment="Center" Height="70" Width="150">
+                            <Button x:Name="ButtonText" 
                                 Content="Check"
                                 FontSize="20" 
                                 Click="Button_Click" 
                                 Height="70" Width="150" 
-                                VerticalAlignment="Center"/>
-                    </StackPanel>
-                    
-                    </Grid>             
-            </StackPanel>
-            
-        </Canvas>
+                                />
+                        </StackPanel>
+
+                    </Grid>
+                </StackPanel>
+
+            </Canvas>
 
         </Border>
     </Grid>

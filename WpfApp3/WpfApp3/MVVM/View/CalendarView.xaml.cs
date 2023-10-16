@@ -97,8 +97,9 @@ namespace WpfApp3.MVVM.View
         // nappi. nappi joka jopa ehkä toimii
         void OnButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-        
-           new MainWindow().Show();
+
+            MainWindow mainWindow = new MainWindow(this);
+            mainWindow.Show();
         }
 
         //uuuuuuuu oikeesti toimii 
@@ -431,9 +432,8 @@ namespace WpfApp3.MVVM.View
             }
         }
 
-        private void UpdateDisplayForCurrentWeek()
+        internal void UpdateDisplayForCurrentWeek()
         {
-
             ReadCsvAndDisplayTimesMon(username);
             ReadCsvAndDisplayTimesTue(username);
             ReadCsvAndDisplayTimesWed(username);
@@ -450,5 +450,14 @@ namespace WpfApp3.MVVM.View
 
  
         }
+        void ChangeUsername_Click(object sender, RoutedEventArgs e)
+        {
+            
+            username = enterUsrTextBox.Text;
+
+            // Update the display for the current week with the new username
+            UpdateDisplayForCurrentWeek();
+        }
+
     }
 }
